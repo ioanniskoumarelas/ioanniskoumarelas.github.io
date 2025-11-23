@@ -1,0 +1,6 @@
+module:
+  imports:
+    # Your block's GitHub URL (replace <USERNAME> and <COLLECTION-NAME> with your GitHub username and block collection name)
+    # - path: github.com/HugoBlox/hugo-blox-builder
+    - path: github.com/HugoBlox/theme-academic-cv
+      disable: false
