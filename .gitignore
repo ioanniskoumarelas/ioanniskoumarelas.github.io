@@ -8,9 +8,11 @@
 
 # Generated site output
 public/
+_public/
 
 # Hugo resources (processed assets)
 resources/
+_resources/
 
 # Hugo build lock
 .hugo_build.lock

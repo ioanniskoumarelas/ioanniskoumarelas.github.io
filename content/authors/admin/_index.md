@@ -1,20 +1,20 @@
 ---
 # Display name
-title: Alex Johnson
+title: Ioannis Koumarelas
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Ioannis
+last_name: Koumarelas
 
 # Pronouns (optional)
-pronouns: he/him
+# pronouns: he/him
 
 # Status emoji
-status:
-  icon: 🚀
+# status:
+#   icon: 🤖
 
 # Is this the primary user of the site?
 superuser: true
@@ -23,12 +23,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI Research Scientist
+role: PhD graduate in Data Cleaning, Senior Data Scientist
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: Veeva Systems
+    url: https://www.veeva.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -49,39 +49,43 @@ profiles:
 
 interests:
   - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Data Matching
+  - Machine & Deep Learning
+  - Natural Language Processing
+  - Duplicate Detection
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
-    icon: ""
-    date_start: 2015-09-01
-    date_end: 2019-06-30
+  - area: PhD in Information Systems
+    institution: Hasso Plattner Institute
+    icon: custom/HPI-apple-touch-icon
+    date_start: 2015-11-01
+    date_end: 2020-11-19
     summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
+      Thesis on _Data Preparation and Domain-Agnostic Duplicate Detection_. Supervised by Prof. Felix Naumann. Published 7 papers in top-tier journals and conferences.
     button:
-      text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
-  - area: MS Computer Science
-    institution: Carnegie Mellon University
-    icon: ""
-    date_start: 2013-09-01
-    date_end: 2015-05-31
+      text: 'Read dissertation'
+      url: 'https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/48913/file/koumarelas_diss.pdf'
+  - area: MSc Computer Science
+    institution: Aristotle University of Thessaloniki
+    icon: "custom/LogoAUTH300ppi"
+    date_start: 2012-09-01
+    date_end: 2014-02-28
     summary: |
-      GPA: 4.0/4.0
+      Specialized in Data Engineering and efficient calculation of Theta-Joins on large-scale data using Apache MapReduce.
+    button:
+      text: 'Read thesis'
+      url: 'https://ikee.lib.auth.gr/record/136112/files/GRI-2015-14052.pdf'
 
-      Specialized in machine learning and robotics.
-  - area: BS Computer Science
-    institution: MIT
-    icon: ""
+  - area: BSc Computer Science
+    institution: Aristotle University of Thessaloniki
+    icon: "custom/LogoAUTH300ppi"
     date_start: 2009-09-01
     date_end: 2013-05-31
     summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
+      Thesis on Recommender Systems on large-scale data using Apache MapReduce.
+    button:
+      text: 'Read thesis (in Greek)'
+      url: 'https://ikee.lib.auth.gr/record/130094/files/%CE%A0%CE%A4%CE%A5%CE%A7%CE%99%CE%91%CE%9A%CE%97.pdf'
 
 work:
   - position: Senior AI Research Scientist
@@ -138,8 +142,10 @@ skills:
 languages:
   - name: English
     percent: 100
-  - name: Spanish
-    percent: 50
+  - name: Greek
+    percent: 100
+  - name: German
+    percent: 25
 
 # Awards.
 #   Add/remove as many awards below as you like.
