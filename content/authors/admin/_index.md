@@ -271,29 +271,65 @@ languages:
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
+# awards:
+# certificates:
 awards:
   - title: AI Automation Build LLM Apps & AI-Agents with n8n & APIs
     url: https://www.udemy.com/certificate/UC-2e08a349-1956-4d2d-a15a-7e5b330982c5/
-    date: '2025-08-01'
+    date: '2025-10-01'
     awarder: Udemy
     icon: brands/udemy
     summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  # - title: AI Innovation Grant
-  #   url: https://www.nsf.gov/
-  #   date: '2021-06-15'
-  #   awarder: National Science Foundation
-  #   icon: hero/currency-dollar
-  #   summary: |
-  #     $500,000 grant for research in ethical AI development.
-  # - title: Outstanding PhD Thesis
-  #   url: https://www.stanford.edu/
-  #   date: '2019-06-30'
-  #   awarder: Stanford University
-  #   icon: hero/academic-cap
-  #   summary: |
-  #     Recognized for contributions to scaling laws in deep learning.
+      Learned how to apply LLMs and Agentic AI using n8n and doing more practical daily tasks, including sending and receiving voice messages via Telegram, booking Google Calendar events, sending e-mails, and more.
+  - title: The Complete Agentic AI Engineering Course (2025)
+    url: https://www.udemy.com/certificate/UC-a1a08aeb-0df4-498a-a145-f2d54e5d058a/
+    date: '2025-10-01'
+    awarder: Udemy
+    icon: brands/udemy
+    summary: |
+      In this course I learned how to use different agentic frameworks, mainly OpenAI, CrewAI, LangGraph, and MCP (Model Context Protocol). With these frameworks we implemented different tools to create a sales representative that sends e-mails, perform our own Deep Research (using Groq), build a Stock Picker, deploy a 4-Agent Engineering-team, and more.
+  - title: LLM Engineering Master AI, Large Language Models & Agents
+    url: https://www.udemy.com/certificate/UC-8420765f-6e48-47ee-8167-e3981f7e1878/
+    date: '2025-09-01'
+    awarder: Udemy
+    icon: brands/udemy
+    summary: |
+      This was a great course. We experimented with multi-modality, code optimization, RAG (Retrieval Augmented Generation), predicting product prices, fine-tuning of models, and experimented with multi-agent system that searches for product price deals.
+  - title: Generative AI with Large Language Models
+    url: https://www.coursera.org/account/accomplishments/verify/UDBWTCNM3YGN
+    date: '2025-07-01'
+    awarder: Coursera
+    icon: brands/Coursera-Logo_600x600
+    summary: |
+      This was a 3-week course.
+      
+      First week contained a refreshing of the Transformers model and its architecture. Generative AI project lifecycle and the concept of pretraining.
 
+      Second week continues fine-tuning to further include multi-task instruction fine-tuning, Parameter Efficient Fine-Tuning (PEFT) with Low-Rank Adaptation (LoRA) and Soft Prompts.
+
+      In the third and final week we dive deeper into Reinforcement Learning with Human Feedback (RLHF) and how we can use reward model to perform our tuning. Chain-of-thought is then introduced to help with reasoning and planning of models. Finally, the ReAct model is shown that is the back-bone of most agentic AI frameworks where reason and act are interleaved to achieve the desired goal.
+
+  - title: LangChain- Develop AI Agents with LangChain & LangGraph
+    url: https://www.udemy.com/certificate/UC-c1b27389-3247-4f96-8cab-e522dbe862bd/
+    date: '2025-07-01'
+    awarder: Udemy
+    icon: brands/udemy
+    summary: |
+      Learned how to ...
+  - title: Deep Learning Specialization
+    url: https://www.coursera.org/account/accomplishments/specialization/certificate/B6J67VCQDELB
+    date: '2021-01-30'
+    awarder: Coursera
+    icon: brands/Coursera-Logo_600x600
+    summary: |
+      Comprised of the following courses:
+      1. A
+      2. B
+      3. C
+      4. D
+      5. E
+      
+      Learned how to ...
 ---
 
 

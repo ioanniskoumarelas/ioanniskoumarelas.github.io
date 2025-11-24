@@ -1,0 +1,17 @@
+/* Select ONLY the icon container inside award cards */
+.w-full.p-6.bg-white.border.border-gray-200.rounded-lg.shadow
+  > div:first-child:has(svg) {
+  width: 80px;      /* enlarge icon container */
+  height: 80px;
+  margin: 0 auto 1rem auto; /* center horizontally & keep spacing below */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make SVG scale to the new container */
+.w-full.p-6.bg-white.border.border-gray-200.rounded-lg.shadow
+  > div:first-child svg {
+  width: 100%;
+  height: 100%;
+}

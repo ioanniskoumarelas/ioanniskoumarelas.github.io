@@ -59,6 +59,8 @@ sections:
     # design:
     #   columns: "1"
   - block: resume-awards
+    # id: certificates
+    id: awards
     content:
       title: Certificates
       username: admin
@@ -66,4 +68,5 @@ sections:
     content:
       title: Languages
       username: admin
+
 ---
