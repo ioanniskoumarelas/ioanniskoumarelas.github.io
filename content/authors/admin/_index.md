@@ -315,21 +315,21 @@ awards:
     awarder: Udemy
     icon: brands/udemy
     summary: |
-      Learned how to ...
+      The instructor in this course introduced me to the concepts of Chain of Thought, ReAct, Few Shot concepts. Then, using LangChain and LangGraph also showcases how to implement a RAG pipeline using vector databases. Finally, he also shows what Model Content Protocol (MCP) is and how it can be used in practice (client, server model).
   - title: Deep Learning Specialization
     url: https://www.coursera.org/account/accomplishments/specialization/certificate/B6J67VCQDELB
     date: '2021-01-30'
     awarder: Coursera
     icon: brands/Coursera-Logo_600x600
     summary: |
-      Comprised of the following courses:
-      1. A
-      2. B
-      3. C
-      4. D
-      5. E
+      Foundational specialization from Coursera on Deep Learning. Comprised of the following courses:
+      1. Neural Networks and Deep Learning
+      2. Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
+      3. Structuring Machine Learning Projects
+      4. Convolutional Neural Networks
+      5. Sequence Models
       
-      Learned how to ...
+      Through it I got a hollistic refreshment and further expansion of my knowledge on the primary Deep Learning fundamentals and models.
 ---
 
 
