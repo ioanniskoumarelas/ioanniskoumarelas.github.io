@@ -92,7 +92,7 @@ education:
       url: 'https://ikee.lib.auth.gr/record/130094/files/%CE%A0%CE%A4%CE%A5%CE%A7%CE%99%CE%91%CE%9A%CE%97.pdf'
 
 work:
-  - position: Data Scientist & Senior Data Scientist
+  - position: Data Scientist / Senior Data Scientist
     company_name: Veeva Systems
     company_url: 'https://www.veeva.com/'
     icon: 'brands/veeva-logo'

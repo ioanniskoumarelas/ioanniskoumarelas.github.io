@@ -8,24 +8,6 @@ appearance:
   mode: system
   color: indigo
 
-# SEO
-marketing:
-  seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
-  analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    plausible: ''
-    fathom: ''
-    pirsch: ''
-  verification:
-    google: ''
-    baidu: ''
-
 # Site header
 header:
   navbar:
@@ -57,4 +39,56 @@ features:
   math:
     enable: false
   privacy_pack:
-    enable: false
+    enable: true
+  comment:
+    provider: giscus
+    giscus:
+      repo: 'ioanniskoumarelas/ioanniskoumarelas.github.io'
+      repo_id: 'R_kgDOQbYv0Q'
+      category: 'Publication comments'
+      category_id: 'DIC_kwDOQbYv0c4CzCKg'
+      mapping: pathname
+      theme: preferred_color_scheme
+      language_code: en
+
+# <script src="https://giscus.app/client.js"
+#         data-repo="ioanniskoumarelas/ioanniskoumarelas.github.io"
+#         data-repo-id="R_kgDOQbYv0Q"
+#         data-category="Publication comments"
+#         data-category-id="DIC_kwDOQbYv0c4CzCKg"
+#         data-mapping="pathname"
+#         data-strict="1"
+#         data-reactions-enabled="1"
+#         data-emit-metadata="0"
+#         data-input-position="bottom"
+#         data-theme="preferred_color_scheme"
+#         data-lang="en"
+#         crossorigin="anonymous"
+#         async>
+# </script>
+
+# SEO
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: ''
+    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
+    twitter: 'GetResearchDev'
+  analytics:
+    google_analytics: ''
+    baidu_tongji: ''
+    plausible: ''
+    fathom: ''
+    pirsch: ''
+  verification:
+    google: ''
+    baidu: ''
+  privacy:
+    cookie_consent:
+      enable: true
+      content:
+        message: "This website uses cookies to ensure you get the best experience."
+        dismiss: "Got it!"
+        link: "Learn more"
+        href: "/privacy/"

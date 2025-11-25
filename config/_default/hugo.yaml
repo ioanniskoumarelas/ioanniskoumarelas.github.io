@@ -53,3 +53,13 @@ security:
   _merge: deep
 sitemap:
   _merge: deep
+
+cascade:
+  - target:
+      path: /post/**
+    params:
+      commentable: true
+  - target:
+      path: /publications/**
+    params:
+      commentable: true
