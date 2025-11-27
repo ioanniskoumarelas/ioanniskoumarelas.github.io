@@ -34,6 +34,36 @@ locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
 
+
+# SEO
+marketing:
+  privacy:
+    cookie_consent:
+      enable: true
+      content:
+        message: "This website uses cookies to ensure you get the best experience."
+        dismiss: "Got it!"
+        link: "Learn more"
+        href: "/privacy/"
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: ''
+    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
+    twitter: 'GetResearchDev'
+  analytics:
+    disable: false
+    # google_analytics: ''
+    google_analytics: 'G-942VRDPQCP'
+    google_tag_manager: 'GTM-PB8G65H'
+    baidu_tongji: ''
+    plausible: ''
+    fathom: ''
+    pirsch: ''
+  verification:
+    google: ''
+    baidu: ''
+
 # Site features
 features:
   math:
@@ -67,28 +97,3 @@ features:
 #         async>
 # </script>
 
-# SEO
-marketing:
-  seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
-  analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    plausible: ''
-    fathom: ''
-    pirsch: ''
-  verification:
-    google: ''
-    baidu: ''
-  privacy:
-    cookie_consent:
-      enable: true
-      content:
-        message: "This website uses cookies to ensure you get the best experience."
-        dismiss: "Got it!"
-        link: "Learn more"
-        href: "/privacy/"
