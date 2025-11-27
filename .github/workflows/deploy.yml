@@ -95,6 +95,9 @@ jobs:
           pnpm dlx pagefind --source "public" || npx pagefind --source "public"
         fi
 
+    - name: Generate Pagefind search index
+      run: npx pagefind --source "public"
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v4
       with:
