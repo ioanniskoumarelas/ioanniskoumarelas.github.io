@@ -1,0 +1,58 @@
+# source: public
+# exclude_selectors:
+#   - "nav"
+#   - "footer"
+#   - ".navigation"
+#   - "#TableOfContents"
+
+# # Exclude documentation folders by glob pattern
+# glob: "**/*.html"
+# exclude_glob:
+#   - "**/courses/**/*.html"
+#   - "**/blog/**/*.html"
+#   - "**/docs/**/*.html"
+
+# # Pagefind configuration
+# site = "public"
+# output_path = "../static/pagefind"
+
+# # Exclude documentation/example content from search
+# exclude_selectors = [
+#     "[data-pagefind-ignore]",
+#     ".courses-content",
+#     ".blog-content"
+# ]
+
+# # Or exclude by URL patterns
+# glob = "**/*.{html}"
+
+
+# # Pagefind configuration
+# site: public
+# output_path: ../static/pagefind
+
+# # Exclude documentation/example content from search
+# exclude_selectors:
+#   - "[data-pagefind-ignore]"
+#   - nav
+#   - footer
+
+# # Exclude specific paths
+# glob: "**/*.html"
+# exclude_globs:
+#   - "**/courses/**"
+#   - "**/blog/**"
+#   - "**/docs/**"
+
+
+# Pagefind configuration
+site: public
+output_path: public/pagefind
+
+# Index all HTML files for now
+glob: "**/*.html"
+
+# Exclude navigation and footer from indexing
+exclude_selectors:
+  - nav
+  - footer
