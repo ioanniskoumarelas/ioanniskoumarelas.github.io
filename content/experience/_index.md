@@ -25,39 +25,6 @@ sections:
       username: admin
     design:
       show_skill_percentage: false
-
-  # - block: markdown
-  #   content:
-  #     title: "Certificates"
-  #     subtitle: "Udemy · Coursera"
-  #     text: |
-  #       ### Coursera
-
-  #       - **Machine Learning Specialization** — Andrew Ng  
-  #           *Coursera · 2023*  
-  #           Certificate ID: XXXXXXX  
-  #           <https://coursera.org/verify/XXXXXXX>
-
-  #       - **Data Structures and Algorithms**  
-  #           *UC San Diego · 2022*  
-  #           Certificate ID: YYYYYYY  
-  #           <https://coursera.org/verify/YYYYYYY>
-
-  #       ---
-
-  #       ### Udemy
-
-  #       - **Deep Learning A–Z™**  
-  #           *Udemy · 2022*  
-  #           Certificate ID: ABCDEF  
-  #           <https://www.udemy.com/certificate/ABCDEF/>
-
-  #       - **Python for Data Science and ML Bootcamp**  
-  #           *Udemy · 2021*  
-  #           Certificate ID: 123456  
-  #           <https://www.udemy.com/certificate/123456/>
-    # design:
-    #   columns: "1"
   - block: resume-awards
     # id: certificates
     id: awards

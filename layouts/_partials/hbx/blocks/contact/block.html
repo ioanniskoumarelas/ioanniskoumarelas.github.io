@@ -1,0 +1,55 @@
+{{ $block := .wcBlock }}
+
+<section id="{{ $block.id }}" class="home-section wg-contact" style="padding: 60px 0;">
+  <div class="home-section-bg"></div>
+  <div class="container" style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+    <div class="row justify-content-center">
+      
+      <!-- Section Heading -->
+      <div class="section-heading col-12 mb-3 text-center" style="margin-bottom: 2rem; text-align: center;">
+        <h1 class="mb-0" style="margin-bottom: 0; font-size: 2.5rem; font-weight: 700;">{{ $block.content.title }}</h1>
+        {{ with $block.content.subtitle }}
+        <p style="margin-top: 1rem; font-size: 1.1rem;">{{ . }}</p>
+        {{ end }}
+      </div>
+      
+      <div class="col-12" style="width: 100%;">
+        
+        <!-- Contact Form -->
+        {{ with $block.content.form }}
+        <div class="mb-3" style="margin-bottom: 2rem;">
+          <form name="contact" method="POST" action="https://formspree.io/f/{{ .formspree.id }}">
+            <div class="form-group form-inline" style="margin-bottom: 1rem;">
+              <label class="sr-only" for="inputName">Name</label>
+              <input type="text" name="name" class="form-control w-100" id="inputName" placeholder="Name" required="" style="width: 100%; padding: 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem; font-size: 1rem;">
+            </div>
+            <div class="form-group form-inline" style="margin-bottom: 1rem;">
+              <label class="sr-only" for="inputEmail">Email</label>
+              <input type="email" name="email" class="form-control w-100" id="inputEmail" placeholder="Email" required="" style="width: 100%; padding: 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem; font-size: 1rem;">
+            </div>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label class="sr-only" for="inputMessage">Message</label>
+              <textarea name="message" class="form-control" id="inputMessage" rows="5" placeholder="Message" required="" style="width: 100%; padding: 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem; font-size: 1rem;"></textarea>
+            </div>
+            <div class="d-none" style="display: none;">
+              <label>Do not fill this field unless you are a bot: <input name="_gotcha"></label>
+            </div>
+            <button type="submit" class="btn btn-primary px-3 py-2 w-100" style="width: 100%; padding: 0.75rem 1.5rem; background-color: #007bff; color: white; border: none; border-radius: 0.25rem; font-size: 1rem; cursor: pointer;">Send</button>
+          </form>
+        </div>
+        {{ end }}
+        
+        <!-- Contact Links (without email) -->
+        <ul class="fa-ul" style="list-style: none; padding-left: 0; margin-left: 3rem;">
+          {{ range $block.content.contact_links }}
+          <li style="margin-bottom: 1rem; position: relative;">
+            <i class="fa-li {{ .icon_pack }} {{ .icon }} fa-2x" aria-hidden="true" style="position: absolute; left: -3rem; top: 0.25rem; font-size: 2rem;"></i>
+            <a href="{{ .link }}" target="_blank" rel="noopener" style="color: #007bff; text-decoration: none;">{{ .name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</section>

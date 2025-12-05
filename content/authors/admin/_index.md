@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD graduate in Data Quality <br> Senior Data Scientist
+role: Senior Data Scientist <br> PhD graduate in Data Quality
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -36,9 +36,9 @@ profiles:
   # - icon: at-symbol
   #   url: 'mailto:alex.johnson@meta.com'
   #   label: E-mail Me
-  - icon: envelope
-    icon_pack: fas
-    link: '/#contact'
+  # - icon: envelope
+  #   icon_pack: fas
+  #   link: '/#contact'
   # - icon: brands/x
   #   url: https://twitter.com/AlexAIResearch
   - icon: brands/github
@@ -51,12 +51,15 @@ profiles:
   #   url: https://orcid.org/0000-0002-1825-0097
 
 interests:
-  - Large Language Models
   - Data Matching
   - Machine & Deep Learning
   - Natural Language Processing
   - Duplicate Detection
+  - Entity Resolution
   - Data Quality
+  - Artificial Intelligence
+  - Data Engineering
+  - Large Language Models
 
 education:
   - area: PhD in Information Systems
@@ -96,7 +99,7 @@ work:
     company_name: Veeva Systems
     company_url: 'https://www.veeva.com/'
     icon: 'brands/veeva-logo'
-    date_start: 2020-01-01
+    date_start: 2021-12-01
     date_end: ''
     summary: |-
       Creating and updating profiles of medical experts (Health Care Professionals – HCPs) while continuously monitoring and ensuring high data quality.
@@ -274,48 +277,66 @@ languages:
 # awards:
 # certificates:
 awards:
-  - title: AI Automation Build LLM Apps & AI-Agents with n8n & APIs
-    url: https://www.udemy.com/certificate/UC-2e08a349-1956-4d2d-a15a-7e5b330982c5/
+  - title: AI & LLM Engineering (Udemy)
+    url: ''
     date: '2025-10-01'
     awarder: Udemy
     icon: brands/udemy
     summary: |
-      Learned how to apply LLMs and Agentic AI using n8n and doing more practical daily tasks, including sending and receiving voice messages via Telegram, booking Google Calendar events, sending e-mails, and more.
-  - title: The Complete Agentic AI Engineering Course (2025)
-    url: https://www.udemy.com/certificate/UC-a1a08aeb-0df4-498a-a145-f2d54e5d058a/
-    date: '2025-10-01'
-    awarder: Udemy
-    icon: brands/udemy
-    summary: |
-      In this course I learned how to use different agentic frameworks, mainly OpenAI, CrewAI, LangGraph, and MCP (Model Context Protocol). With these frameworks we implemented different tools to create a sales representative that sends e-mails, perform our own Deep Research (using Groq), build a Stock Picker, deploy a 4-Agent Engineering-team, and more.
-  - title: LLM Engineering Master AI, Large Language Models & Agents
-    url: https://www.udemy.com/certificate/UC-8420765f-6e48-47ee-8167-e3981f7e1878/
-    date: '2025-09-01'
-    awarder: Udemy
-    icon: brands/udemy
-    summary: |
-      This was a great course. We experimented with multi-modality, code optimization, RAG (Retrieval Augmented Generation), predicting product prices, fine-tuning of models, and experimented with multi-agent system that searches for product price deals.
+      Completed during July - October 2025 a comprehensive series of courses covering modern AI engineering practices:
+      
+      **Courses completed:**
+      - [AI Automation: Build LLM Apps & AI-Agents with n8n & APIs](https://www.udemy.com/certificate/UC-2e08a349-1956-4d2d-a15a-7e5b330982c5/) - Practical LLM automation for daily tasks including Telegram voice messages, Google Calendar booking, and email management
+      - [The Complete Agentic AI Engineering Course](https://www.udemy.com/certificate/UC-a1a08aeb-0df4-498a-a145-f2d54e5d058a/) - Built multi-agent systems using OpenAI, CrewAI, LangGraph, and MCP. Created sales agents, deep research tools, stock pickers, and 4-agent engineering teams
+      - [LLM Engineering: Master AI, Large Language Models & Agents](https://www.udemy.com/certificate/UC-8420765f-6e48-47ee-8167-e3981f7e1878/) - Explored multi-modality, RAG pipelines, model fine-tuning, and multi-agent systems for product price optimization
+      - [LangChain: Develop AI Agents with LangChain & LangGraph](https://www.udemy.com/certificate/UC-c1b27389-3247-4f96-8cab-e522dbe862bd/) - Implemented Chain of Thought, ReAct, and Few Shot techniques. Built RAG pipelines with vector databases and worked with Model Context Protocol (MCP)
+
+
+
+  # - title: AI Automation Build LLM Apps & AI-Agents with n8n & APIs
+  #   url: https://www.udemy.com/certificate/UC-2e08a349-1956-4d2d-a15a-7e5b330982c5/
+  #   date: '2025-10-01'
+  #   awarder: Udemy
+  #   icon: brands/udemy
+  #   summary: |
+  #     Learned how to apply LLMs and Agentic AI using n8n and doing more practical daily tasks, including sending and receiving voice messages via Telegram, booking Google Calendar events, sending e-mails, and more.
+  # - title: The Complete Agentic AI Engineering Course (2025)
+  #   url: https://www.udemy.com/certificate/UC-a1a08aeb-0df4-498a-a145-f2d54e5d058a/
+  #   date: '2025-10-01'
+  #   awarder: Udemy
+  #   icon: brands/udemy
+  #   summary: |
+  #     In this course I learned how to use different agentic frameworks, mainly OpenAI, CrewAI, LangGraph, and MCP (Model Context Protocol). With these frameworks we implemented different tools to create a sales representative that sends e-mails, perform our own Deep Research (using Groq), build a Stock Picker, deploy a 4-Agent Engineering-team, and more.
+  # - title: LLM Engineering Master AI, Large Language Models & Agents
+  #   url: https://www.udemy.com/certificate/UC-8420765f-6e48-47ee-8167-e3981f7e1878/
+  #   date: '2025-09-01'
+  #   awarder: Udemy
+  #   icon: brands/udemy
+  #   summary: |
+  #     This was a great course. We experimented with multi-modality, code optimization, RAG (Retrieval Augmented Generation), predicting product prices, fine-tuning of models, and experimented with multi-agent system that searches for product price deals.
   - title: Generative AI with Large Language Models
     url: https://www.coursera.org/account/accomplishments/verify/UDBWTCNM3YGN
     date: '2025-07-01'
     awarder: Coursera
     icon: brands/Coursera-Logo_600x600
     summary: |
-      This was a 3-week course.
-      
-      First week contained a refreshing of the Transformers model and its architecture. Generative AI project lifecycle and the concept of pretraining.
+      Three-week course covering the complete LLM lifecycle: Transformer architecture and pretraining, fine-tuning techniques including Parameter Efficient Fine-Tuning (PEFT) with LoRA and Soft Prompts, and Reinforcement Learning with Human Feedback (RLHF). Explored Chain-of-Thought reasoning and the ReAct framework that underlies modern agentic AI systems.
 
-      Second week continues fine-tuning to further include multi-task instruction fine-tuning, Parameter Efficient Fine-Tuning (PEFT) with Low-Rank Adaptation (LoRA) and Soft Prompts.
+# This was a 3-week course.
 
-      In the third and final week we dive deeper into Reinforcement Learning with Human Feedback (RLHF) and how we can use reward model to perform our tuning. Chain-of-thought is then introduced to help with reasoning and planning of models. Finally, the ReAct model is shown that is the back-bone of most agentic AI frameworks where reason and act are interleaved to achieve the desired goal.
+# First week contained a refreshing of the Transformers model and its architecture. Generative AI project lifecycle and the concept of pretraining.
 
-  - title: LangChain- Develop AI Agents with LangChain & LangGraph
-    url: https://www.udemy.com/certificate/UC-c1b27389-3247-4f96-8cab-e522dbe862bd/
-    date: '2025-07-01'
-    awarder: Udemy
-    icon: brands/udemy
-    summary: |
-      The instructor in this course introduced me to the concepts of Chain of Thought, ReAct, Few Shot concepts. Then, using LangChain and LangGraph also showcases how to implement a RAG pipeline using vector databases. Finally, he also shows what Model Content Protocol (MCP) is and how it can be used in practice (client, server model).
+# Second week continues fine-tuning to further include multi-task instruction fine-tuning, Parameter Efficient Fine-Tuning (PEFT) with Low-Rank Adaptation (LoRA) and Soft Prompts.
+
+# In the third and final week we dive deeper into Reinforcement Learning with Human Feedback (RLHF) and how we can use reward model to perform our tuning. Chain-of-thought is then introduced to help with reasoning and planning of models. Finally, the ReAct model is shown that is the back-bone of most agentic AI frameworks where reason and act are interleaved to achieve the desired goal.
+
+  # - title: LangChain- Develop AI Agents with LangChain & LangGraph
+  #   url: https://www.udemy.com/certificate/UC-c1b27389-3247-4f96-8cab-e522dbe862bd/
+  #   date: '2025-07-01'
+  #   awarder: Udemy
+  #   icon: brands/udemy
+  #   summary: |
+  #     The instructor in this course introduced me to the concepts of Chain of Thought, ReAct, Few Shot concepts. Then, using LangChain and LangGraph also showcases how to implement a RAG pipeline using vector databases. Finally, he also shows what Model Content Protocol (MCP) is and how it can be used in practice (client, server model).
   - title: Deep Learning Specialization
     url: https://www.coursera.org/account/accomplishments/specialization/certificate/B6J67VCQDELB
     date: '2021-01-30'

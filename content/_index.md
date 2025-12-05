@@ -29,37 +29,115 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+  - block: features
+    content:
+      title: "Skills"
+      # text: "Discover what makes our platform special"
+      items:
+        # - name: "Fast Performance"
+        #   # description: "Lightning-fast load times for better user experience"
+        #   icon: "bolt"
+        # - name: "Easy to Use"
+        #   # description: "Intuitive interface that anyone can master"
+        #   icon: "heart"
+        # - name: "Secure"
+        #   # description: "Enterprise-grade security built-in"
+        #   icon: "shield-check"
 
-        Please reach out to collaborate 😃
+        - name: "Entity Resolution"
+          # description: "Duplicate Detection"
+          icon: "users"
+          icon_pack: fas
+        - name: "Machine Learning"
+          # description: "AI"
+          # icon: "robot"
+          icon: "Font_Awesome_5_solid_robot"
+          # icon_pack: "hero"
+
+        - name: "Data Cleaning"
+          # description: "DTCL"
+          # icon: "quidditch"
+          icon: "Font_Awesome_5_solid_quidditch"
+
+        - name: "Data Engineering"
+          icon: "Font_Awesome_5_solid_database"
+        #     icon_pack: fas
+
+        - name: "Research & Development"
+          icon: "Font_Awesome_5_solid_search"
+
+        - name: "Data Science"
+          icon: "Font_Awesome_5_regular_chart-bar"
+        #     icon: chart-bar
+        #     icon_pack: fas
+        #     name: Data Science
+
+
+        # - description:
+        #     icon: quidditch
+        #     icon_pack: fas
+        #     name: Data Cleaning
+        # - description:
+        #     icon: robot
+        #     icon_pack: fas
+        #     name: Machine Learning
+        # - description:
+        #     icon: database
+        #     icon_pack: fas
+        #     name: Data Engineering
+        # - description:
+        #     icon: search
+        #     icon_pack: fas
+        #     name: Research & Development
+        # - description:
+        #     icon: chart-bar
+        #     icon_pack: fas
+        #     name: Data Science
     design:
-      columns: '1'
-  - block: collection
-    id: papers
+      view: grid
+      # css_class: 'grid grid-cols-3 gap-4'
+      columns: '3'
+      # css_class: 'features-grid'
+      # columns: "3"
+      css_class: 'force-three-cols large-icons no-icon-background'
+      background:
+        color: "gray-50"
+
+
+  - block: resume-experience
     content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publications
-        featured_only: true
+      username: admin
     design:
-      view: article-grid
-      columns: 2
-  - block: collection
+      # Hugo date format
+      date_format: 'January 2006'
+      # Education or Experience section first?
+      is_education_first: false
+  # - block: resume-skills
+  #   content:
+  #     # title: Skills & Hobbies
+  #     title: Core Skills & Technologies
+  #     username: admin
+  #   design:
+  #     show_skill_percentage: false
+  # - block: collection
+  #   content:
+  #     title: Core Skills & Technologies
+  #     filters:
+  #       folders:
+  #         - skills
+  #   design:
+  #     columns: '2'
+  #     view: card
+  - block: resume-awards
+    # id: certificates
+    id: awards
     content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
+      title: Certificates
+      username: admin
+  - block: resume-languages
+    content:
+      title: Languages
+      username: admin
+
 ---

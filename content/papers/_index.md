@@ -1,19 +1,11 @@
 ---
-title: Publications
-# cms_exclude: true
-cms_exclude: false
-date: 2025-12-03
+title: 'Projects'
+date: 2024-05-19
 type: landing
 
-# View.
-view: citation
-
-# # Optional header image (relative to `static/media/` folder).
-# banner:
-#   caption: ''
-#   image: ''
-
 design:
+  # Section spacing
+  # spacing: '5rem'
   spacing: '6rem'
 
 sections:
