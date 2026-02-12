@@ -1,0 +1,515 @@
+{{ if site.Params.chatbot.enable }}
+<style>
+  #chatbot-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #chatbot-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+  }
+  #chatbot-btn svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+  }
+  #chatbot-panel {
+    display: none;
+    position: fixed;
+    bottom: 92px;
+    right: 24px;
+    width: 380px;
+    max-height: 520px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  #chatbot-panel.open {
+    display: flex;
+  }
+  #chatbot-header {
+    background: #4f46e5;
+    color: #fff;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  #chatbot-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0 4px;
+    opacity: 0.8;
+  }
+  #chatbot-header button:hover {
+    opacity: 1;
+  }
+  #chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 200px;
+    max-height: 340px;
+  }
+  .chat-msg {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.45;
+    word-wrap: break-word;
+  }
+  .chat-msg.user {
+    align-self: flex-end;
+    background: #4f46e5;
+    color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+  .chat-msg.assistant {
+    align-self: flex-start;
+    background: #f3f4f6;
+    color: #1f2937;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-msg.assistant a {
+    color: #4f46e5;
+    text-decoration: underline;
+  }
+  .chat-msg.assistant p {
+    margin: 0 0 8px 0;
+  }
+  .chat-msg.assistant p:last-child {
+    margin-bottom: 0;
+  }
+  .chat-msg.assistant ul, .chat-msg.assistant ol {
+    margin: 4px 0 8px 0;
+    padding-left: 18px;
+  }
+  .chat-msg.assistant li {
+    margin-bottom: 2px;
+  }
+  .chat-msg.assistant strong {
+    font-weight: 600;
+  }
+  .chat-msg.assistant code {
+    background: rgba(0,0,0,0.06);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  .chat-msg.assistant h1, .chat-msg.assistant h2, .chat-msg.assistant h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 8px 0 4px 0;
+  }
+  .chat-msg.assistant h1:first-child, .chat-msg.assistant h2:first-child, .chat-msg.assistant h3:first-child {
+    margin-top: 0;
+  }
+  .chat-typing {
+    align-self: flex-start;
+    display: flex;
+    gap: 4px;
+    padding: 10px 14px;
+  }
+  .chat-typing span {
+    width: 8px;
+    height: 8px;
+    background: #9ca3af;
+    border-radius: 50%;
+    animation: chatBounce 1.2s infinite;
+  }
+  .chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+  .chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes chatBounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-6px); }
+  }
+  #chatbot-input-area {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: flex-end;
+  }
+  #chatbot-input {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    resize: none;
+    max-height: 80px;
+    min-height: 38px;
+    line-height: 1.4;
+    outline: none;
+    font-family: inherit;
+    background: #fff;
+    color: #1f2937;
+  }
+  #chatbot-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+  }
+  #chatbot-send {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    flex-shrink: 0;
+    height: 38px;
+  }
+  #chatbot-send:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  #chatbot-limit-notice {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #6b7280;
+    border-top: 1px solid #e5e7eb;
+    display: none;
+    flex-shrink: 0;
+  }
+
+  /* Dark mode */
+  html.dark #chatbot-panel {
+    background: #1f2937;
+  }
+  html.dark .chat-msg.assistant {
+    background: #374151;
+    color: #e5e7eb;
+  }
+  html.dark .chat-msg.assistant a {
+    color: #818cf8;
+  }
+  html.dark .chat-msg.assistant code {
+    background: rgba(255,255,255,0.1);
+  }
+  html.dark #chatbot-input {
+    background: #374151;
+    color: #e5e7eb;
+    border-color: #4b5563;
+  }
+  html.dark #chatbot-input:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.2);
+  }
+  html.dark #chatbot-input-area {
+    border-top-color: #374151;
+  }
+  html.dark #chatbot-limit-notice {
+    color: #9ca3af;
+    border-top-color: #374151;
+  }
+  html.dark .chat-typing span {
+    background: #6b7280;
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    #chatbot-panel {
+      width: calc(100% - 16px);
+      right: 8px;
+      bottom: 88px;
+      max-height: 70vh;
+    }
+    #chatbot-btn {
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+</style>
+
+<button id="chatbot-btn" aria-label="Open chat" title="Ask me anything about Ioannis">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg>
+</button>
+
+<div id="chatbot-panel" role="dialog" aria-label="Chat with AI assistant">
+  <div id="chatbot-header">
+    <span>Ask about Ioannis</span>
+    <button id="chatbot-close" aria-label="Close chat">&times;</button>
+  </div>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-limit-notice"></div>
+  <div id="chatbot-input-area">
+    <textarea id="chatbot-input" placeholder="Ask me anything..." rows="1"></textarea>
+    <button id="chatbot-send">Send</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var WORKER_URL = "{{ site.Params.chatbot.worker_url }}";
+  var MAX_CLIENT_MSGS = 10;
+
+  var btn = document.getElementById('chatbot-btn');
+  var panel = document.getElementById('chatbot-panel');
+  var closeBtn = document.getElementById('chatbot-close');
+  var messagesEl = document.getElementById('chatbot-messages');
+  var input = document.getElementById('chatbot-input');
+  var sendBtn = document.getElementById('chatbot-send');
+  var limitNotice = document.getElementById('chatbot-limit-notice');
+
+  var messages = [];
+  var msgCount = 0;
+  var isStreaming = false;
+
+  // Restore session
+  try {
+    var saved = sessionStorage.getItem('chatbot-messages');
+    var savedCount = sessionStorage.getItem('chatbot-msg-count');
+    if (saved) {
+      messages = JSON.parse(saved);
+      msgCount = parseInt(savedCount, 10) || 0;
+      messages.forEach(function(m) { appendMessage(m.role, m.content); });
+    }
+  } catch(e) {}
+
+  if (messages.length === 0) {
+    appendMessage('assistant', "Hi! I'm an AI assistant. Ask me anything about Ioannis's background, research, or experience.");
+  }
+
+  function saveSession() {
+    try {
+      sessionStorage.setItem('chatbot-messages', JSON.stringify(messages));
+      sessionStorage.setItem('chatbot-msg-count', String(msgCount));
+    } catch(e) {}
+  }
+
+  function renderMarkdown(text) {
+    // Sanitize HTML entities first
+    var s = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // Split into lines for block-level processing
+    var lines = s.split('\n');
+    var html = '';
+    var inList = false;
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i];
+      // Headers
+      if (/^### (.+)$/.test(line)) { if (inList) { html += '</ul>'; inList = false; } html += '<h3>' + RegExp.$1 + '</h3>'; continue; }
+      if (/^## (.+)$/.test(line)) { if (inList) { html += '</ul>'; inList = false; } html += '<h2>' + RegExp.$1 + '</h2>'; continue; }
+      if (/^# (.+)$/.test(line)) { if (inList) { html += '</ul>'; inList = false; } html += '<h1>' + RegExp.$1 + '</h1>'; continue; }
+      // List items
+      if (/^[-*] (.+)$/.test(line)) {
+        if (!inList) { html += '<ul>'; inList = true; }
+        html += '<li>' + RegExp.$1 + '</li>';
+        continue;
+      }
+      // Close list if we hit a non-list line
+      if (inList) { html += '</ul>'; inList = false; }
+      // Empty line = paragraph break
+      if (line.trim() === '') { html += '</p><p>'; continue; }
+      // Normal text
+      html += line + ' ';
+    }
+    if (inList) html += '</ul>';
+    html = '<p>' + html + '</p>';
+    // Inline formatting
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+    html = html.replace(/`(.+?)`/g, '<code>$1</code>');
+    // Clean up empty paragraphs
+    html = html.replace(/<p>\s*<\/p>/g, '');
+    return html;
+  }
+
+  function appendMessage(role, text) {
+    var div = document.createElement('div');
+    div.className = 'chat-msg ' + role;
+    if (role === 'assistant') {
+      div.innerHTML = renderMarkdown(text);
+    } else {
+      div.textContent = text;
+    }
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function showTyping() {
+    var div = document.createElement('div');
+    div.className = 'chat-typing';
+    div.id = 'chatbot-typing';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideTyping() {
+    var el = document.getElementById('chatbot-typing');
+    if (el) el.remove();
+  }
+
+  function setInputEnabled(enabled) {
+    input.disabled = !enabled;
+    sendBtn.disabled = !enabled;
+    isStreaming = !enabled;
+  }
+
+  function checkLimit() {
+    if (msgCount >= MAX_CLIENT_MSGS) {
+      limitNotice.textContent = 'Message limit reached for this session. Refresh the page to start over.';
+      limitNotice.style.display = 'block';
+      setInputEnabled(false);
+      return true;
+    }
+    if (msgCount >= MAX_CLIENT_MSGS - 2) {
+      limitNotice.textContent = (MAX_CLIENT_MSGS - msgCount) + ' messages remaining';
+      limitNotice.style.display = 'block';
+    }
+    return false;
+  }
+
+  async function sendMessage() {
+    var text = input.value.trim();
+    if (!text || isStreaming) return;
+    if (checkLimit()) return;
+
+    appendMessage('user', text);
+    messages.push({ role: 'user', content: text });
+    msgCount++;
+    saveSession();
+    input.value = '';
+    input.style.height = 'auto';
+
+    if (checkLimit()) return;
+
+    setInputEnabled(false);
+    showTyping();
+
+    try {
+      var res = await fetch(WORKER_URL + '/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: messages })
+      });
+
+      hideTyping();
+
+      if (!res.ok) {
+        var errData;
+        try { errData = await res.json(); } catch(e) { errData = {}; }
+        var errMsg = errData.error || 'Sorry, something went wrong. Please try again.';
+        appendMessage('assistant', errMsg);
+        setInputEnabled(true);
+        return;
+      }
+
+      var assistantDiv = appendMessage('assistant', '');
+      var fullText = '';
+      var reader = res.body.getReader();
+      var decoder = new TextDecoder();
+      var buffer = '';
+
+      while (true) {
+        var result = await reader.read();
+        if (result.done) break;
+
+        buffer += decoder.decode(result.value, { stream: true });
+        var lines = buffer.split('\n');
+        buffer = lines.pop();
+
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i].trim();
+          if (!line.startsWith('data: ')) continue;
+          var data = line.slice(6);
+          if (data === '[DONE]') continue;
+
+          try {
+            var evt = JSON.parse(data);
+            if (evt.type === 'content_block_delta' && evt.delta && evt.delta.text) {
+              fullText += evt.delta.text;
+              assistantDiv.innerHTML = renderMarkdown(fullText);
+              messagesEl.scrollTop = messagesEl.scrollHeight;
+            }
+          } catch(e) {}
+        }
+      }
+
+      if (fullText) {
+        messages.push({ role: 'assistant', content: fullText });
+        saveSession();
+      }
+    } catch(e) {
+      hideTyping();
+      appendMessage('assistant', 'Connection error. Please check your internet and try again.');
+    }
+
+    setInputEnabled(true);
+    input.focus();
+  }
+
+  // Toggle panel
+  btn.addEventListener('click', function() {
+    panel.classList.toggle('open');
+    if (panel.classList.contains('open')) {
+      input.focus();
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+  });
+
+  closeBtn.addEventListener('click', function() {
+    panel.classList.remove('open');
+  });
+
+  // Send
+  sendBtn.addEventListener('click', sendMessage);
+
+  // Keyboard
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && panel.classList.contains('open')) {
+      panel.classList.remove('open');
+    }
+  });
+
+  // Auto-resize textarea
+  input.addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = Math.min(this.scrollHeight, 80) + 'px';
+  });
+
+  checkLimit();
+})();
+</script>
+{{ end }}
