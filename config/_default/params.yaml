@@ -27,7 +27,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Ioannis Koumarelas. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -54,7 +54,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
+    description: 'Ioannis Koumarelas, PhD — Machine Learning Engineer specializing in production ML systems, data quality, and entity resolution.'
     twitter: 'GetResearchDev'
   analytics:
     disable: false

@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Ioannis Koumarelas
+title: Ioannis Koumarelas, PhD
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior Data Scientist <br> PhD graduate in Data Quality
+role: Machine Learning Engineer <br> Data Quality & ML Systems Expert
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -50,16 +50,6 @@ profiles:
   # - icon: academicons/orcid
   #   url: https://orcid.org/0000-0002-1825-0097
 
-interests:
-  - Data Matching
-  - Machine & Deep Learning
-  - Natural Language Processing
-  - Duplicate Detection
-  - Entity Resolution
-  - Data Quality
-  - Artificial Intelligence
-  - Data Engineering
-  - Large Language Models
 
 education:
   - area: PhD in Information Systems
@@ -358,4 +348,4 @@ awards:
 
 <!-- Great applications can change the world and having high-quality data is more important than we previously thought. I am passionate about understanding data and making them a powerful tool in our hands through sophisticated Machine Learning and Data Engineering solutions. -->
 
-Specializing in Data Science, Data Engineering, and Machine Learning to convert messy data into high-quality, usable information. Exploring LLMs and agentic AI to enhance automation and workflows.
+Machine learning engineer (PhD) with 5+ years of experience building and deploying production ML systems at scale. Deep expertise in data quality, entity resolution, and duplicate detection. Actively exploring LLMs and agentic AI to deliver intelligent automation.
