@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Machine Learning Engineer <br> Data Quality & ML Systems Expert
+role: Machine Learning Engineer <br> PhD in Data Quality · ML Systems Expert
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
