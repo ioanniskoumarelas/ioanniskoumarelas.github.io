@@ -1,0 +1,36 @@
+{{/* Hugo Blox: Languages */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+{{/* Local override: label-based display instead of percentage circles */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $author := $block.content.username | default "admin" }}
+
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your Skill block and create an associated author page if one does not already exist. See https://docs.hugoblox.com/page-builder/#about " $person_page_path }}
+{{end}}
+{{ $langs := $person_page.Params.languages }}
+
+<div class="flex flex-col items-center max-w-4xl mx-auto gap-3 justify-center px-6 sm:px-0">
+
+  <h3 class="mb-8 text-3xl font-bold text-gray-900 dark:text-white text-center">
+    {{ $block.content.title | markdownify | emojify }}
+  </h3>
+
+  {{ with $block.content.text }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
+
+  <div class="flex items-stretch flex-col sm:flex-row gap-6">
+    {{ range $langs }}
+    <div class="flex flex-col items-center bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl border border-gray-200/60 dark:border-gray-700/60 px-8 py-6 shadow-sm hover:shadow-lg hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300">
+      {{ with .flag }}<span class="text-4xl mb-2">{{ . }}</span>{{ end }}
+      <span class="text-lg font-semibold text-gray-900 dark:text-white mb-1">{{.name}}</span>
+      <span class="text-sm font-medium text-primary-600 dark:text-primary-400">{{ .level | default "—" }}</span>
+    </div>
+    {{ end }}
+  </div>
+
+</div>

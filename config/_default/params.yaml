@@ -55,7 +55,7 @@ marketing:
     local_business_type: ''
     org_name: ''
     description: 'Ioannis Koumarelas, PhD — Machine Learning Engineer specializing in production ML systems, data quality, and entity resolution.'
-    twitter: 'GetResearchDev'
+    twitter: ''
   analytics:
     disable: false
     # google_analytics: ''
@@ -68,6 +68,9 @@ marketing:
   verification:
     google: ''
     baidu: ''
+
+# Remove Hugo Blox footer attribution
+i_am_a_sponsor: true
 
 # Site features
 features:

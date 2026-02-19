@@ -18,11 +18,11 @@ sections:
       # button:
       #   text: Download CV
       #   url: uploads/resume.pdf
-      headings:
-        about: ''
     design:
       # Apply a gradient background
       css_class: hbx-bg-gradient
+      spacing:
+        padding: ['0', '0', '0', '0']
       # Avatar customization
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
@@ -76,6 +76,7 @@ sections:
     design:
       date_format: 'January 2006'
       show: education
+      css_class: 'bg-gray-50 dark:bg-gray-900'
 
   - block: resume-languages
     content:

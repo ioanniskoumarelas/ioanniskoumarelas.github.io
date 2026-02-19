@@ -253,12 +253,15 @@ certificates:
 
 
 languages:
-  - name: English
-    percent: 100
   - name: Greek
-    percent: 100
+    level: Native
+    flag: "🇬🇷"
+  - name: English
+    level: Fluent
+    flag: "🇬🇧"
   - name: German
-    percent: 25
+    level: Beginner
+    flag: "🇩🇪"
 
 # Awards.
 #   Add/remove as many awards below as you like.

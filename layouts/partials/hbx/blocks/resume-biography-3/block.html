@@ -1,7 +1,7 @@
 {{/* Hugo Blox: Biography 3 */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
-{{/* Local override: removed Education section from biography to avoid duplication with resume-experience block */}}
+{{/* Local override: single-column centered hero layout */}}
 
 {{/* Initialise */}}
 {{ $page := .wcPage }}
@@ -21,7 +21,7 @@
 {{ $avatar_size := $block.design.avatar.size | default "large" }}
 {{ $avatar_shape := $block.design.avatar.shape | default "circle" }}
 
-{{/* Size mappings optimized for 2025 standards: display_size -> [display_px, generation_px] */}}
+{{/* Size mappings */}}
 {{ $size_map := dict "small" (slice "150" "300") "medium" (slice "200" "400") "large" (slice "320" "640") "xl" (slice "400" "800") "xxl" (slice "500" "1000") }}
 {{ $size_config := index $size_map $avatar_size | default (index $size_map "large") }}
 {{ $display_size := index $size_config 0 }}
@@ -31,153 +31,141 @@
 {{ $shape_classes := dict "circle" "rounded-full" "square" "rounded-none" "rounded" "rounded-lg" }}
 {{ $shape_class := index $shape_classes $avatar_shape | default "rounded-full" }}
 
-<div class="resume-biography py-8 px-4 sm:py-12 md:py-16 lg:py-24 xl:py-32 relative overflow-hidden">
-  {{/* Add subtle top gradient for navbar transition */}}
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
+<div class="resume-biography pt-8 pb-0 px-4 sm:pt-12 md:pt-16 relative overflow-hidden">
+  <div class="max-w-4xl mx-auto">
 
-      {{/* Left Column: Flexible span */}}
-      <div class="md:col-span-4 flex flex-col items-center text-center space-y-6 md:space-y-8">
+    {{/* Hero: Avatar + Name + Role + Social — centered single column */}}
+    <div class="flex flex-col items-center text-center space-y-5 mb-10">
 
-        {{/* Banner Image */}}
-        {{ $img := "" }}
-        {{with $block.design.banner.filename}}
-        {{- $img = resources.Get (path.Join "media" .) -}}
-        {{ if $img }}
-          <div class="relative w-full h-64 rounded-2xl overflow-hidden shadow-xl mb-8">
-            {{ if ne $img.MediaType.SubType "gif" }}
-              {{ $responsive := partial "functions/process_responsive_image.html" (dict
-                  "image" $img
-                  "mode" "fill"
-                  "aspect_ratio" "16:9"
-                  "sizes" (slice 768 1024 1366 1920 2560)
-              ) }}
-              <img class="absolute inset-0 w-full h-full object-cover"
-                   srcset="{{ $responsive.srcset }}"
-                   sizes="100vw"
-                   src="{{ $responsive.fallback.RelPermalink }}"
-                   alt="" />
-            {{ else }}
-              {{- $img = $img.Process "webp" -}}
-              <img class="absolute inset-0 w-full h-full object-cover"
-                   src="{{$img.RelPermalink}}"
-                   alt="" />
-            {{ end }}
-          </div>
-        {{ end }}
-        {{ end }}
-
-        {{/* Avatar */}}
-        {{ if $avatar }}
-        <div class="avatar-wrapper {{ if $img }}-mt-24{{else}}mb-4{{end}}" style="width: {{$display_size}}px; height: {{$display_size}}px;">
-          {{ $avatar_image := $avatar.Fill (printf "%sx%s Center" $generation_size $generation_size) }}
-          <img class="avatar {{$shape_class}} border-4 border-white shadow-2xl"
-               src="{{ $avatar_image.RelPermalink }}"
-               alt="{{$person_page.Title}}"
-               width="{{$display_size}}"
-               height="{{$display_size}}"
-               style="width: {{$display_size}}px; height: {{$display_size}}px; object-fit: cover;">
-          {{with $person.status.icon}}<span class="avatar-emoji">{{.|emojify}}</span>{{end}}
-        </div>
-        {{ end }}
-
-        {{/* Name and Role - Centered */}}
-        <div class="space-y-3">
-          <h1 class="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white leading-tight">
-            {{- if $person.name_pronunciation -}}
-              <ruby>
-                <rb>{{ $person_page.Title }}</rb>
-                <rt class="text-sm text-gray-500 dark:text-gray-400">{{ $person.name_pronunciation }}</rt>
-              </ruby>
-            {{- else -}}
-              {{- $person_page.Title -}}
-            {{- end -}}
-          </h1>
-
-          {{- with $person.pronouns -}}
-            <p class="text-lg text-gray-600 dark:text-gray-400">({{ . }})</p>
-          {{- end -}}
-
-          {{ with $person.role }}
-            <p class="text-2xl font-semibold text-primary-600 dark:text-primary-400">{{ . | markdownify | emojify }}</p>
-          {{ end }}
-
-          {{ range $person.organizations }}
-            <p class="text-lg text-gray-700 dark:text-gray-300">
-              {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ end }}
-              {{ .name }}
-              {{ if .url }}</a>{{ end }}
-            </p>
+      {{/* Banner Image */}}
+      {{ $img := "" }}
+      {{with $block.design.banner.filename}}
+      {{- $img = resources.Get (path.Join "media" .) -}}
+      {{ if $img }}
+        <div class="relative w-full h-64 rounded-2xl overflow-hidden shadow-xl mb-8">
+          {{ if ne $img.MediaType.SubType "gif" }}
+            {{ $responsive := partial "functions/process_responsive_image.html" (dict
+                "image" $img
+                "mode" "fill"
+                "aspect_ratio" "16:9"
+                "sizes" (slice 768 1024 1366 1920 2560)
+            ) }}
+            <img class="absolute inset-0 w-full h-full object-cover"
+                 srcset="{{ $responsive.srcset }}"
+                 sizes="100vw"
+                 src="{{ $responsive.fallback.RelPermalink }}"
+                 alt="" />
+          {{ else }}
+            {{- $img = $img.Process "webp" -}}
+            <img class="absolute inset-0 w-full h-full object-cover"
+                 src="{{$img.RelPermalink}}"
+                 alt="" />
           {{ end }}
         </div>
+      {{ end }}
+      {{ end }}
 
-        {{/* Social Icons */}}
-        <div class="flex flex-wrap justify-center gap-4">
-          {{ range $person.profiles }}
-          {{ $pack := or .icon_pack "fas" }}
-          {{ $pack_prefix := $pack }}
-          {{ if in (slice "fab" "fas" "far" "fal") $pack }}
-            {{ $pack_prefix = "fa" }}
-          {{ end }}
-          {{ $link := .url | default .link }}
-          {{ $scheme := (urls.Parse $link).Scheme }}
-          {{ $target := "" }}
-          {{ if not $scheme }}
-            {{ $link = (.url | default .link) | relLangURL }}
-            {{ if eq (path.Ext $link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
-          {{ else if in (slice "http" "https") $scheme }}
-            {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
-          {{ end }}
-          <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}
-             aria-label="{{ .icon }}"
-             {{ with .label }} title="{{.}}"{{ end }}
-             class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400
-                    shadow-md hover:shadow-xl hover:scale-110 hover:-translate-y-1
-                    transition-all duration-300 border border-gray-200 dark:border-gray-700">
-            {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-6 h-6\"")  }}
-          </a>
-          {{ end }}
-        </div>
+      {{/* Avatar */}}
+      {{ if $avatar }}
+      <div class="avatar-wrapper {{ if $img }}-mt-24{{end}}" style="width: {{$display_size}}px; height: {{$display_size}}px;">
+        {{ $avatar_image := $avatar.Fill (printf "%sx%s Center" $generation_size $generation_size) }}
+        <img class="avatar {{$shape_class}} border-4 border-white shadow-2xl"
+             src="{{ $avatar_image.RelPermalink }}"
+             alt="{{$person_page.Title}}"
+             width="{{$display_size}}"
+             height="{{$display_size}}"
+             style="width: {{$display_size}}px; height: {{$display_size}}px; object-fit: cover;">
+        {{with $person.status.icon}}<span class="avatar-emoji">{{.|emojify}}</span>{{end}}
       </div>
+      {{ end }}
 
-      {{/* Right Column: Flexible span */}}
-      <div class="md:col-span-8">
+      {{/* Name */}}
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white leading-tight">
+        {{- if $person.name_pronunciation -}}
+          <ruby>
+            <rb>{{ $person_page.Title }}</rb>
+            <rt class="text-sm text-gray-500 dark:text-gray-400">{{ $person.name_pronunciation }}</rt>
+          </ruby>
+        {{- else -}}
+          {{- $person_page.Title -}}
+        {{- end -}}
+      </h1>
 
-        {{/* Bio Section */}}
-        {{ with ($block.content.text | emojify | $page.RenderString) | default $person_page.Content }}
-        <div class="mb-12">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-              {{ partial "functions/get_icon" (dict "name" "identification" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-            </div>
-            {{ $i18n_about := i18n "about_me" }}
-            {{ $about_default := cond (eq $i18n_about "about_me") "Professional Summary" $i18n_about }}
-            {{ $about_heading := $block.content.headings.about | default $about_default }}
-            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $about_heading }}</h2>
-          </div>
-          <div class="prose prose-lg dark:prose-invert text-gray-800 dark:text-gray-200 text-base sm:text-lg leading-relaxed">
-            <div class="bio-text" {{ with $block.design.biography.style }}{{ (printf "style=\"%s\"" .) | safe.HTMLAttr }}{{end}}>
-              {{ . }}
-            </div>
-          </div>
-        </div>
+      {{- with $person.pronouns -}}
+        <p class="text-lg text-gray-600 dark:text-gray-400">({{ . }})</p>
+      {{- end -}}
+
+      {{/* Role */}}
+      {{ with $person.role }}
+        <p class="text-xl sm:text-2xl font-semibold text-primary-600 dark:text-primary-400">{{ . | markdownify | emojify }}</p>
+      {{ end }}
+
+      {{/* Organization */}}
+      {{ range $person.organizations }}
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ end }}
+          {{ .name }}
+          {{ if .url }}</a>{{ end }}
+        </p>
+      {{ end }}
+
+      {{/* Social Icons */}}
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        {{ range $person.profiles }}
+        {{ $pack := or .icon_pack "fas" }}
+        {{ $pack_prefix := $pack }}
+        {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+          {{ $pack_prefix = "fa" }}
         {{ end }}
-
-        {{/* CV Download Button */}}
-        {{ with $block.content.button }}
-        <div class="mb-16">
-          <a href="{{.url}}" target="_blank"
-             class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-            {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-5 h-5 mr-3'") }}
-            {{.text}}
-          </a>
-        </div>
+        {{ $link := .url | default .link }}
+        {{ $scheme := (urls.Parse $link).Scheme }}
+        {{ $target := "" }}
+        {{ if not $scheme }}
+          {{ $link = (.url | default .link) | relLangURL }}
+          {{ if eq (path.Ext $link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
+        {{ else if in (slice "http" "https") $scheme }}
+          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
         {{ end }}
-
-        {{/* Education section removed — shown in resume-experience block instead */}}
-
-        {{/* Interests section removed — now shown in dedicated technical-skills block */}}
+        <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}
+           aria-label="{{ .icon }}"
+           {{ with .label }} title="{{.}}"{{ end }}
+           class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400
+                  shadow-md hover:shadow-xl hover:scale-110 hover:-translate-y-1
+                  transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-6 h-6\"")  }}
+        </a>
+        {{ end }}
       </div>
     </div>
+
+    {{/* Mission Statement — full width below hero */}}
+    {{ with ($block.content.text | emojify | $page.RenderString) | default $person_page.Content }}
+    <div class="max-w-prose mx-auto">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
+          {{ partial "functions/get_icon" (dict "name" "identification" "attributes" "class='w-5 h-5 text-primary-600 dark:text-primary-400'") }}
+        </div>
+        {{ $about_heading := $block.content.headings.about | default "Mission Statement" }}
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $about_heading }}</h2>
+      </div>
+      <div class="prose prose-lg dark:prose-invert text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+        <div class="bio-text" {{ with $block.design.biography.style }}{{ (printf "style=\"%s\"" .) | safe.HTMLAttr }}{{end}}>
+          {{ . }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+    {{/* CV Download Button */}}
+    {{ with $block.content.button }}
+    <div class="mt-8 text-center">
+      <a href="{{.url}}" target="_blank"
+         class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+        {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-5 h-5 mr-3'") }}
+        {{.text}}
+      </a>
+    </div>
+    {{ end }}
+
   </div>
 </div>
