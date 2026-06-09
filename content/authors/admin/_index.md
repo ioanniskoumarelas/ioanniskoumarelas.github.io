@@ -26,9 +26,9 @@ highlight_name: true
 role: Machine Learning Engineer <br> PhD in Data Quality
 
 # Organizations/Affiliations to display in Biography blox
-organizations:
-  - name: Veeva Systems
-    url: https://www.veeva.com/
+# organizations:
+#   - name: Veeva Systems
+#     url: https://www.veeva.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -52,71 +52,79 @@ profiles:
 
 
 education:
-  - area: PhD in Information Systems
+  - area: Intensive German Course – Levels A2.2, B1.1, B1.2
+    institution: Die Neue Schule, Berlin
+    date_start: 2026-03-01
+    date_end: 2026-05-31
+    summary: |
+      Intensive German language course in Berlin, progressing through levels A2.2, B1.1, and B1.2.
+  - area: PhD in Computer Science – Data Preparation & Domain-Agnostic Duplicate Detection
     institution: Hasso Plattner Institute
     icon: custom/HPI-apple-touch-icon
     date_start: 2015-11-01
     date_end: 2020-11-19
     summary: |
-      Thesis on _Data Preparation and Domain-Agnostic Duplicate Detection_. Supervised by Prof. Felix Naumann. Published 7 papers in top-tier journals and conferences.
+      Thesis on _Data Preparation and Domain-Agnostic Duplicate Detection_, supervised by Prof. Felix Naumann. Defended with distinction (Magna cum Laude). Published 7 papers in top-tier journals and conferences. Organized 6 project seminars on Duplicate Detection, Data Preparation, Blockchain, Text Mining, and Recommender Systems.
     button:
       text: 'Read dissertation'
       url: 'https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/48913/file/koumarelas_diss.pdf'
-  - area: MSc Computer Science
+  - area: MSc Computer Science – Theta-Joins on MapReduce
     institution: Aristotle University of Thessaloniki
     icon: "custom/LogoAUTH300ppi"
     date_start: 2012-09-01
     date_end: 2014-02-28
     summary: |
-      Specialized in Data Engineering and efficient calculation of Theta-Joins on large-scale data using Apache MapReduce.
+      Implemented thesis in Python, Java, and Hadoop; published in top-tier conference. Awarded State Scholarship Foundation scholarship. Vice Chair of local ACM Student Chapter. Participated in ACM SIGMOD 2013 programming contest (streaming system in C++).
     button:
       text: 'Read thesis'
       url: 'https://ikee.lib.auth.gr/record/136112/files/GRI-2015-14052.pdf'
 
-  - area: BSc Computer Science
+  - area: BSc Computer Science – Recommender System on MapReduce
     institution: Aristotle University of Thessaloniki
     icon: "custom/LogoAUTH300ppi"
-    date_start: 2009-09-01
-    date_end: 2013-05-31
+    date_start: 2008-09-01
+    date_end: 2012-06-30
     summary: |
-      Thesis on Recommender Systems on large-scale data using Apache MapReduce.
+      Implemented thesis in Java and Hadoop; published in top-tier journal. Interned at IT Center performing system and database administration.
     button:
       text: 'Read thesis (in Greek)'
       url: 'https://ikee.lib.auth.gr/record/130094/files/%CE%A0%CE%A4%CE%A5%CE%A7%CE%99%CE%91%CE%9A%CE%97.pdf'
 
 work:
-  - position: Data Scientist / Senior Data Scientist
-    company_name: Veeva Systems
+  - position: Senior Data Scientist / Data Scientist
+    company_name: Veeva Systems – Link Product
     company_url: 'https://www.veeva.com/'
     icon: 'brands/veeva-logo'
     date_start: 2021-12-01
-    date_end: ''
+    date_end: 2026-02-28
     summary: |-
-      Creating and updating profiles of medical experts (Health Care Professionals – HCPs) while continuously monitoring and ensuring high data quality.
-      * Processing millions of Health-Care Professionals’ activities (e.g., publications) to create and update millions of professional profiles.
-      * Analyzing data to assess quality and support decisions, training machine learning models on large-scale curated datasets, and deploying them to production.
-      * Turning ideas into experiments in Jupyter Notebooks and building production-grade, resilient PySpark pipelines. Tech stack includes AWS, Apache Airflow, Kubernetes, Docker, and more.
-    # Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: Data Engineer / Full-Stack Engineer
-    company_name: HPI Schul-Cloud
+      Senior Data Scientist (Mar 2024 – Feb 2026) · Data Scientist (Dec 2021 – Feb 2024)
+      * Built scalable ML models for clustering medical activities into expert profiles, applying entity resolution and duplicate detection at production scale – processing billions of activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions.
+      * Transformed exploratory Jupyter Notebook prototypes into production-ready PySpark + Airflow pipelines on AWS EMR, with MLflow for experiment tracking and model deployment, Docker and Kubernetes for containerized services, testing, monitoring, and CI/CD integration, collaborating with cross-functional engineering teams.
+      * Assessed data quality using precision–recall metrics with threshold-based quality tiers, ensuring very high precision while substantially reducing manual curation costs.
+      * Organized Data Science meetups, technical talks, and team activities to promote knowledge sharing and strengthen engineering culture.
+  - position: Full-Stack Engineer / Data Engineer & Technical Team Co-Leader
+    company_name: HPI Schul-Cloud – Dataport
     company_url: 'https://dbildungscloud.de/'
     icon: 'brands/2018_HPI_transparent-512x445'
     # css_class: no-bullet
     date_start: 2020-04-01
     date_end: 2021-11-30
     summary: |
-      Managed data workflows and improved content quality for the HPI SchulCloud platform, delivering content to multiple states and their schools across Germany.
-      * Imported and scraped data using Scrapy; managed the platform’s database and content infrastructure based on Tomcat, PostgreSQL, and ElasticSearch.
-      * Improved data quality through validation, enrichment, and consistency checks.
-      * Supported multiple teams, broadening my full-stack expertise—from DevOps (Docker, Kubernetes) to backend development (JavaScript, later TypeScript), and front-end development (Vue.js, Next.js), as well as writing unit and end-to-end tests using Cucumber (Gherkin).
+      Full-Stack Engineer (Jan 2021 – Nov 2021) · Data Engineer / Technical Team Co-Leader (Apr 2020 – Dec 2020)
+      * Built and maintained data pipelines for 300k+ educational assets, improving structure, reliability, and discoverability for end users.
+      * Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality at scale.
+      * Contributed across the full stack (Python, Vue.js, PostgreSQL, Docker, Kubernetes) to maintain and scale the educational platform.
+      * Led technical requirements clarification, team operations, and onboarding during a multi-month organizational transition.
   - position: Research Consultant
-    company_name: SAP Concur
+    company_name: SAP & SAP Concur
     # company_url: 'https://openai.com/'
     icon: 'brands/sap-concur-logo'
     date_start: 2015-11-01
     date_end: 2018-10-31
     summary: |
-      In the first three years of my PhD, in collaboration with SAP and in particular SAP Concur, we develop approaches to perform data cleaning and deduplication on hotel datasets provided by our partners from Concur. Several methodologies were developed and the most notable ones produced two publications. Doing an applied PhD was a remarkable experience to get hands-on knowledge.
+      * Developed 3 novel ML pipelines in Python and Java to improve duplicate detection, increasing matching success by 18%.
+      * Delivered on-site technical tutorials at SAP Concur Seattle (USA) on data matching classification and pipeline optimization.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -260,7 +268,7 @@ languages:
     level: Fluent
     flag: "🇬🇧"
   - name: German
-    level: Beginner
+    level: Intermediate (B1)
     flag: "🇩🇪"
 
 # Awards.
@@ -351,4 +359,4 @@ awards:
 
 <!-- Great applications can change the world and having high-quality data is more important than we previously thought. I am passionate about understanding data and making them a powerful tool in our hands through sophisticated Machine Learning and Data Engineering solutions. -->
 
-Machine learning engineer (PhD) with 5+ years of experience building and deploying production ML systems at scale. Deep expertise in data quality, entity resolution, and duplicate detection. Actively exploring LLMs and agentic AI to deliver intelligent automation.
+Data scientist (PhD) with 5+ years of experience building and deploying production ML systems at scale in the life sciences domain. Proven track record designing scalable pipelines that process billions of data points and transforming research prototypes into production-grade systems. Deep expertise in data quality, entity resolution, and duplicate detection. Actively building skills in LLMs and agentic AI to deliver intelligent automation.

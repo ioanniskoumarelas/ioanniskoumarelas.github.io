@@ -13,46 +13,56 @@ STRICT RULES — follow these at all times, no exceptions:
 
 # Ioannis Koumarelas, PhD
 
-## Current Role
-Senior Data Scientist at Veeva Systems (since December 2021)
-- Processing millions of Health-Care Professionals' activities (e.g., publications) to create and update millions of professional profiles
-- Analyzing data to assess quality and support decisions, training machine learning models on large-scale curated datasets, and deploying them to production
-- Turning ideas into experiments in Jupyter Notebooks and building production-grade, resilient PySpark pipelines
-- Tech stack: AWS, Apache Airflow, Kubernetes, Docker
+## Current Status
+Ioannis left Veeva Systems at the end of February 2026. He is currently based in Berlin, Germany, where he recently completed an intensive German course (B1 level) and is open to new opportunities.
 
-## Previous Roles
-Data Engineer / Full-Stack Engineer at HPI Schul-Cloud (April 2020 – November 2021)
-- Managed data workflows and improved content quality for the HPI SchulCloud platform, delivering content to multiple states and their schools across Germany
-- Imported and scraped data using Scrapy; managed the platform's database and content infrastructure based on Tomcat, PostgreSQL, and ElasticSearch
-- Full-stack expertise: DevOps (Docker, Kubernetes), backend (JavaScript, TypeScript), front-end (Vue.js, Next.js), testing (Cucumber/Gherkin)
+## Work Experience
+Senior Data Scientist (March 2024 – February 2026) / Data Scientist (December 2021 – February 2024) at Veeva Systems – Link Product, Berlin
+- Built scalable ML models for clustering medical activities into expert profiles, applying entity resolution and duplicate detection at production scale – processing billions of activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions
+- Transformed exploratory Jupyter Notebook prototypes into production-ready PySpark + Airflow pipelines on AWS EMR, with MLflow for experiment tracking and model deployment, Docker and Kubernetes for containerized services, testing, monitoring, and CI/CD integration
+- Assessed data quality using precision–recall metrics with threshold-based quality tiers, ensuring very high precision while substantially reducing manual curation costs
+- Organized Data Science meetups, technical talks, and team activities to promote knowledge sharing
 
-Research Consultant at SAP Concur (November 2015 – October 2018)
-- Collaborated with SAP Concur on data cleaning and deduplication of hotel datasets during the first three years of PhD
-- Several methodologies developed; the most notable ones produced two publications
+Full-Stack Engineer (January 2021 – November 2021) / Data Engineer & Technical Team Co-Leader (April 2020 – December 2020) at HPI Schul-Cloud – Dataport
+- Built and maintained data pipelines for 300k+ educational assets, improving structure, reliability, and discoverability for end users
+- Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality at scale
+- Contributed across the full stack (Python, Vue.js, PostgreSQL, Docker, Kubernetes) to maintain and scale the educational platform
+- Led technical requirements clarification, team operations, and onboarding during a multi-month organizational transition
+
+Research Consultant at SAP & SAP Concur (November 2015 – October 2018)
+- Developed 3 novel ML pipelines in Python and Java to improve duplicate detection, increasing matching success by 18%
+- Delivered on-site technical tutorials at SAP Concur Seattle (USA) on data matching classification and pipeline optimization
 
 ## Education
-PhD in Information Systems — Hasso Plattner Institute (November 2015 – November 2020)
+Intensive German Course (Levels A2.2, B1.1, B1.2) — Die Neue Schule, Berlin (March 2026 – May 2026)
+
+PhD in Computer Science — Hasso Plattner Institute (November 2015 – November 2020)
 - Thesis: "Data Preparation and Domain-Agnostic Duplicate Detection"
-- Supervised by Prof. Felix Naumann
+- Supervised by Prof. Felix Naumann; defended with distinction (Magna cum Laude)
 - Published 7 papers in top-tier journals and conferences
+- Organized 6 project seminars on Duplicate Detection, Data Preparation, Blockchain, Text Mining, and Recommender Systems
 
 MSc Computer Science — Aristotle University of Thessaloniki (September 2012 – February 2014)
-- Specialized in Data Engineering and efficient calculation of Theta-Joins on large-scale data using Apache MapReduce
+- Thesis on Theta-Joins on MapReduce, implemented in Python, Java, and Hadoop; published in top-tier conference
+- Awarded State Scholarship Foundation scholarship; Vice Chair of local ACM Student Chapter; participated in ACM SIGMOD 2013 programming contest
 
-BSc Computer Science — Aristotle University of Thessaloniki (September 2009 – May 2013)
-- Thesis on Recommender Systems on large-scale data using Apache MapReduce
+BSc Computer Science — Aristotle University of Thessaloniki (September 2008 – June 2012)
+- Thesis on Recommender Systems on MapReduce, implemented in Java and Hadoop; published in top-tier journal
+- Interned at IT Center performing system and database administration
 
 ## Research Interests
 Data Matching, Machine & Deep Learning, Natural Language Processing, Duplicate Detection, Entity Resolution, Data Quality, Artificial Intelligence, Data Engineering, Large Language Models
 
 ## Technical Skills
-Data Science, Machine Learning, Data Engineering, Entity Resolution, Data Cleaning, Research & Development
-
-## Technologies
-Python, PySpark / Spark, Pandas, AWS, Docker, Kubernetes
+- Programming Languages: Python, SQL, Java, JavaScript, C/C++
+- ML & Data: PySpark, scikit-learn, PyTorch, Pandas, MLflow, Apache Spark, Apache Airflow
+- Infrastructure & DevOps: AWS (EMR, S3), Docker, Kubernetes, CI/CD, FastAPI, Git, pytest
+- Data Quality: Entity Resolution, Duplicate Detection, Record Linkage, Data Cleaning, Data Preparation
+- AI & LLMs: Large Language Models, LangChain, Agentic AI
+- Databases: PostgreSQL, MongoDB
 
 ## Languages
-English (fluent), Greek (native), German (basic)
+English (fluent), Greek (native), German (intermediate, B1)
 
 ## Publications (10 total)
 
