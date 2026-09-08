@@ -11,7 +11,7 @@ publishDate: "2020-08-01T00:00:00Z"
 doi: ""
 
 # Publication type
-publication_types: ["1"]
+publication_types: ["paper-conference"]
 
 # Publication venue
 publication: In *Very Large Data Bases* 2020

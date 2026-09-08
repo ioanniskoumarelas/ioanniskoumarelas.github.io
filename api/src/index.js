@@ -18,12 +18,12 @@ Ioannis left Veeva Systems at the end of February 2026. He is currently based in
 
 ## Work Experience
 Senior Data Scientist (March 2024 – February 2026) / Data Scientist (December 2021 – February 2024) at Veeva Systems – Link Product, Berlin
-- Built scalable ML models for clustering medical activities into expert profiles, applying entity resolution and duplicate detection at production scale – processing billions of activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions
+- Was part of a team that built the ML models matching and clustering medical activities into expert profiles – embedding-based candidate retrieval, similarity ranking with gradient boosted trees, and entity resolution – processing up to 20 billion activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions
 - Transformed exploratory Jupyter Notebook prototypes into production-ready PySpark + Airflow pipelines on AWS EMR, with MLflow for experiment tracking and model deployment, Docker and Kubernetes for containerized services, testing, monitoring, and CI/CD integration
-- Assessed data quality using precision–recall metrics with threshold-based quality tiers, ensuring very high precision while substantially reducing manual curation costs
+- Balanced a three-way trade-off between precision, recall, and manual-curation cost, using threshold-based quality tiers to hold 99% precision while reducing manual curation costs by up to 70%
 - Organized Data Science meetups, technical talks, and team activities to promote knowledge sharing
 
-Full-Stack Engineer (January 2021 – November 2021) / Data Engineer & Technical Team Co-Leader (April 2020 – December 2020) at HPI Schul-Cloud – Dataport
+Data Engineer / Full-Stack Engineer at HPI Schul-Cloud – Dataport (April 2020 – November 2021)
 - Built and maintained data pipelines for 300k+ educational assets, improving structure, reliability, and discoverability for end users
 - Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality at scale
 - Contributed across the full stack (Python, Vue.js, PostgreSQL, Docker, Kubernetes) to maintain and scale the educational platform
@@ -36,17 +36,17 @@ Research Consultant at SAP & SAP Concur (November 2015 – October 2018)
 ## Education
 Intensive German Course (Levels A2.2, B1.1, B1.2) — Die Neue Schule, Berlin (March 2026 – May 2026)
 
-PhD in Computer Science — Hasso Plattner Institute (November 2015 – November 2020)
+PhD (Dr. rer. nat.) in Information Systems — Hasso Plattner Institute (HPI), University of Potsdam – Digital Engineering Faculty (November 2015 – November 2020)
 - Thesis: "Data Preparation and Domain-Agnostic Duplicate Detection"
 - Supervised by Prof. Felix Naumann; defended with distinction (Magna cum Laude)
 - Published 7 papers in top-tier journals and conferences
 - Organized 6 project seminars on Duplicate Detection, Data Preparation, Blockchain, Text Mining, and Recommender Systems
 
-MSc Computer Science — Aristotle University of Thessaloniki (September 2012 – February 2014)
+MSc in Informatics (Information Systems) — Aristotle University of Thessaloniki (AUTH), School of Informatics (September 2012 – February 2014)
 - Thesis on Theta-Joins on MapReduce, implemented in Python, Java, and Hadoop; published in top-tier conference
 - Awarded State Scholarship Foundation scholarship; Vice Chair of local ACM Student Chapter; participated in ACM SIGMOD 2013 programming contest
 
-BSc Computer Science — Aristotle University of Thessaloniki (September 2008 – June 2012)
+BSc in Informatics (Information Systems) — Aristotle University of Thessaloniki (AUTH), School of Informatics (September 2008 – June 2012)
 - Thesis on Recommender Systems on MapReduce, implemented in Java and Hadoop; published in top-tier journal
 - Interned at IT Center performing system and database administration
 
@@ -55,10 +55,10 @@ Data Matching, Machine & Deep Learning, Natural Language Processing, Duplicate D
 
 ## Technical Skills
 - Programming Languages: Python, SQL, Java, JavaScript, C/C++
-- ML & Data: PySpark, scikit-learn, PyTorch, Pandas, MLflow, Apache Spark, Apache Airflow
+- ML & Data: PySpark, scikit-learn, XGBoost, PyTorch, Pandas, NumPy, Hugging Face Transformers, MLflow, Apache Spark, Apache Airflow
 - Infrastructure & DevOps: AWS (EMR, S3), Docker, Kubernetes, CI/CD, FastAPI, Git, pytest
-- Data Quality: Entity Resolution, Duplicate Detection, Record Linkage, Data Cleaning, Data Preparation
-- AI & LLMs: Large Language Models, LangChain, Agentic AI
+- Data Quality: Entity Resolution, Duplicate Detection, Record Linkage, Data Cleaning, Data Preparation, Embeddings, Vector Search (Qdrant)
+- AI & LLMs: Large Language Models, LangChain, LangGraph, Agentic AI
 - Databases: PostgreSQL, MongoDB
 
 ## Languages

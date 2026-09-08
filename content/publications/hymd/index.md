@@ -18,7 +18,7 @@ publishDate: "2020-05-01T00:00:00Z"
 
 # Publication type
 # From CSL standard; "conference-paper" corresponds to your old "1"
-publication_types: ["paper-conference"]
+publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name
 publication: "In *ACM Transactions on Database Systems (TODS)* 2020"
