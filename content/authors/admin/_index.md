@@ -58,8 +58,8 @@ education:
     date_end: 2026-05-31
     summary: |
       Intensive German language course in Berlin, progressing through levels A2.2, B1.1, and B1.2.
-  - area: PhD in Computer Science – Data Preparation & Domain-Agnostic Duplicate Detection
-    institution: Hasso Plattner Institute
+  - area: PhD (Dr. rer. nat.) in Information Systems – Data Preparation & Domain-Agnostic Duplicate Detection
+    institution: Hasso Plattner Institute (HPI), University of Potsdam – Digital Engineering Faculty
     icon: custom/HPI-apple-touch-icon
     date_start: 2015-11-01
     date_end: 2020-11-19
@@ -68,8 +68,8 @@ education:
     button:
       text: 'Read dissertation'
       url: 'https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/48913/file/koumarelas_diss.pdf'
-  - area: MSc Computer Science – Theta-Joins on MapReduce
-    institution: Aristotle University of Thessaloniki
+  - area: MSc in Informatics (Information Systems) – Theta-Joins on MapReduce
+    institution: Aristotle University of Thessaloniki (AUTH), School of Informatics
     icon: "custom/LogoAUTH300ppi"
     date_start: 2012-09-01
     date_end: 2014-02-28
@@ -79,8 +79,8 @@ education:
       text: 'Read thesis'
       url: 'https://ikee.lib.auth.gr/record/136112/files/GRI-2015-14052.pdf'
 
-  - area: BSc Computer Science – Recommender System on MapReduce
-    institution: Aristotle University of Thessaloniki
+  - area: BSc in Informatics (Information Systems) – Recommender System on MapReduce
+    institution: Aristotle University of Thessaloniki (AUTH), School of Informatics
     icon: "custom/LogoAUTH300ppi"
     date_start: 2008-09-01
     date_end: 2012-06-30
@@ -99,11 +99,11 @@ work:
     date_end: 2026-02-28
     summary: |-
       Senior Data Scientist (Mar 2024 – Feb 2026) · Data Scientist (Dec 2021 – Feb 2024)
-      * Built scalable ML models for clustering medical activities into expert profiles, applying entity resolution and duplicate detection at production scale – processing billions of activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions.
+      * Was part of a team that built the ML models matching and clustering medical activities into expert profiles – embedding-based candidate retrieval, similarity ranking with gradient boosted trees, and entity resolution – processing up to 20 billion activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions.
       * Transformed exploratory Jupyter Notebook prototypes into production-ready PySpark + Airflow pipelines on AWS EMR, with MLflow for experiment tracking and model deployment, Docker and Kubernetes for containerized services, testing, monitoring, and CI/CD integration, collaborating with cross-functional engineering teams.
-      * Assessed data quality using precision–recall metrics with threshold-based quality tiers, ensuring very high precision while substantially reducing manual curation costs.
+      * Balanced a three-way trade-off between precision, recall, and manual-curation cost, using threshold-based quality tiers to hold 99% precision while reducing manual curation costs by up to 70%.
       * Organized Data Science meetups, technical talks, and team activities to promote knowledge sharing and strengthen engineering culture.
-  - position: Full-Stack Engineer / Data Engineer & Technical Team Co-Leader
+  - position: Data Engineer / Full-Stack Engineer
     company_name: HPI Schul-Cloud – Dataport
     company_url: 'https://dbildungscloud.de/'
     icon: 'brands/2018_HPI_transparent-512x445'
@@ -111,7 +111,6 @@ work:
     date_start: 2020-04-01
     date_end: 2021-11-30
     summary: |
-      Full-Stack Engineer (Jan 2021 – Nov 2021) · Data Engineer / Technical Team Co-Leader (Apr 2020 – Dec 2020)
       * Built and maintained data pipelines for 300k+ educational assets, improving structure, reliability, and discoverability for end users.
       * Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality at scale.
       * Contributed across the full stack (Python, Vue.js, PostgreSQL, Docker, Kubernetes) to maintain and scale the educational platform.
@@ -359,4 +358,4 @@ awards:
 
 <!-- Great applications can change the world and having high-quality data is more important than we previously thought. I am passionate about understanding data and making them a powerful tool in our hands through sophisticated Machine Learning and Data Engineering solutions. -->
 
-Data scientist (PhD) with 5+ years of experience building and deploying production ML systems at scale in the life sciences domain. Proven track record designing scalable pipelines that process billions of data points and transforming research prototypes into production-grade systems. Deep expertise in data quality, entity resolution, and duplicate detection. Actively building skills in LLMs and agentic AI to deliver intelligent automation.
+Data scientist (PhD) with 5+ years of experience building and deploying production ML systems. Experience designing scalable pipelines that process billions of data points and turning research prototypes into production-grade systems. Deep expertise in data quality, entity resolution, and duplicate detection. Production experience with embeddings and vector search, plus recent work in LLM application development and agentic systems.

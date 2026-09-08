@@ -46,7 +46,7 @@ sections:
           items: ["Python", "SQL", "Java", "JavaScript", "C/C++"]
         - name: "ML & Data"
           icon: "cpu-chip"
-          items: ["PySpark", "scikit-learn", "PyTorch", "Pandas", "MLflow", "Apache Spark", "Apache Airflow"]
+          items: ["PySpark", "scikit-learn", "XGBoost", "PyTorch", "Pandas", "NumPy", "Hugging Face Transformers", "MLflow", "Apache Spark", "Apache Airflow"]
         - name: "Infrastructure & DevOps"
           icon: "server"
           items: ["AWS (EMR, S3)", "Docker", "Kubernetes", "CI/CD", "FastAPI", "Git", "pytest"]
@@ -55,10 +55,10 @@ sections:
           items: ["PostgreSQL", "MongoDB"]
         - name: "Data Quality"
           icon: "shield-check"
-          items: ["Entity Resolution", "Duplicate Detection", "Record Linkage", "Data Cleaning", "Data Preparation"]
+          items: ["Entity Resolution", "Duplicate Detection", "Record Linkage", "Data Cleaning", "Data Preparation", "Embeddings", "Vector Search (Qdrant)"]
         - name: "AI & LLMs"
           icon: "sparkles"
-          items: ["Large Language Models", "LangChain", "Agentic AI"]
+          items: ["Large Language Models", "LangChain", "LangGraph", "Agentic AI"]
     design:
       background:
         color: "gray-50"
@@ -77,6 +77,19 @@ sections:
       date_format: 'January 2006'
       show: education
       css_class: 'bg-gray-50 dark:bg-gray-900'
+
+  - block: markdown
+    id: publications
+    content:
+      title: Publications
+      text: |-
+        **10 peer-reviewed papers** across BSc, MSc, and PhD research — 6 journal articles and 4 conference papers on entity resolution, duplicate detection, data preparation, and data quality.
+
+        **Journals** — ACM Journal of Data and Information Quality (×3) · ACM Transactions on Database Systems · Distributed and Parallel Databases (Springer) · Expert Systems with Applications (Elsevier)
+
+        **Conferences** — VLDB · EDBT/ICDT · Italian Symposium on Advanced Database Systems (SEBD) · International Workshop on Data Science for Macro-Modeling
+
+        [Browse all publications](/publications/) · [Google Scholar profile](https://scholar.google.com/citations?user=yrUrNz4AAAAJ)
 
   - block: resume-languages
     content:
