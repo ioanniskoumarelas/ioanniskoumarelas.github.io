@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Machine Learning Engineer <br> PhD in Data Quality
+role: Senior Data Scientist · Machine Learning Engineer <br> PhD in Data Quality
 
 # Organizations/Affiliations to display in Biography blox
 # organizations:
@@ -99,10 +99,11 @@ work:
     date_end: 2026-02-28
     summary: |-
       Senior Data Scientist (Mar 2024 – Feb 2026) · Data Scientist (Dec 2021 – Feb 2024)
-      * Was part of a team that built the ML models matching and clustering medical activities into expert profiles – embedding-based candidate retrieval, similarity ranking with gradient boosted trees, and entity resolution – processing up to 20 billion activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions.
-      * Transformed exploratory Jupyter Notebook prototypes into production-ready PySpark + Airflow pipelines on AWS EMR, with MLflow for experiment tracking and model deployment, Docker and Kubernetes for containerized services, testing, monitoring, and CI/CD integration, collaborating with cross-functional engineering teams.
-      * Balanced a three-way trade-off between precision, recall, and manual-curation cost, using threshold-based quality tiers to hold 99% precision while reducing manual curation costs by up to 70%.
-      * Organized Data Science meetups, technical talks, and team activities to promote knowledge sharing and strengthen engineering culture.
+      * **Models:** Trained and fine-tuned entity-resolution models to match and cluster medical activities into expert profiles, using embedding-based candidate retrieval followed by ranking with gradient-boosted trees (XGBoost).
+      * **Results:** Achieved 99% precision while reducing the need for manual review. Quality thresholds determined which matches were automated and which required manual review, with precision and recall evaluated against human-annotated data.
+      * **Scale:** Processed billions of activity pairs in recurring workflows and generated millions of expert profiles across the US, EU, LATAM, and APAC.
+      * **Production:** Turned Jupyter prototypes into production PySpark and Airflow pipelines on AWS EMR, using MLflow, Docker, Kubernetes, testing, Grafana monitoring, and CI/CD. Optimized Spark performance and cluster costs while collaborating with cross-functional engineering teams.
+      * **Team:** Organized Data Science meetups and technical talks.
   - position: Data Engineer / Full-Stack Engineer
     company_name: HPI Schul-Cloud – Dataport
     company_url: 'https://dbildungscloud.de/'
@@ -112,7 +113,7 @@ work:
     date_end: 2021-11-30
     summary: |
       * Built and maintained data pipelines for 300k+ educational assets, improving structure, reliability, and discoverability for end users.
-      * Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality at scale.
+      * Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality.
       * Contributed across the full stack (Python, Vue.js, PostgreSQL, Docker, Kubernetes) to maintain and scale the educational platform.
       * Led technical requirements clarification, team operations, and onboarding during a multi-month organizational transition.
   - position: Research Consultant
@@ -350,7 +351,7 @@ awards:
       4. Convolutional Neural Networks
       5. Sequence Models
       
-      Through it I got a hollistic refreshment and further expansion of my knowledge on the primary Deep Learning fundamentals and models.
+      Together, these courses provided a comprehensive refresher on deep learning fundamentals and further expanded my knowledge of modern deep learning models.
 ---
 
 
@@ -358,4 +359,4 @@ awards:
 
 <!-- Great applications can change the world and having high-quality data is more important than we previously thought. I am passionate about understanding data and making them a powerful tool in our hands through sophisticated Machine Learning and Data Engineering solutions. -->
 
-Data scientist (PhD) with 5+ years of experience building and deploying production ML systems. Experience designing scalable pipelines that process billions of data points and turning research prototypes into production-grade systems. Deep expertise in data quality, entity resolution, and duplicate detection. Production experience with embeddings and vector search, plus recent work in LLM application development and agentic systems.
+Senior Data Scientist (PhD) with 5+ years of industry experience building and deploying production ML systems, most recently in life sciences.
