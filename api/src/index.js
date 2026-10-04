@@ -13,19 +13,22 @@ STRICT RULES — follow these at all times, no exceptions:
 
 # Ioannis Koumarelas, PhD
 
+Senior Data Scientist (PhD) with 5+ years of industry experience building and deploying production ML systems, most recently in life sciences. Professional identity: Senior Data Scientist and Machine Learning Engineer.
+
 ## Current Status
 Ioannis left Veeva Systems at the end of February 2026. He is currently based in Berlin, Germany, where he recently completed an intensive German course (B1 level) and is open to new opportunities.
 
 ## Work Experience
 Senior Data Scientist (March 2024 – February 2026) / Data Scientist (December 2021 – February 2024) at Veeva Systems – Link Product, Berlin
-- Was part of a team that built the ML models matching and clustering medical activities into expert profiles – embedding-based candidate retrieval, similarity ranking with gradient boosted trees, and entity resolution – processing up to 20 billion activity pairs per run and generating millions of automated profiles across US, EU, LATAM, and APAC regions
-- Transformed exploratory Jupyter Notebook prototypes into production-ready PySpark + Airflow pipelines on AWS EMR, with MLflow for experiment tracking and model deployment, Docker and Kubernetes for containerized services, testing, monitoring, and CI/CD integration
-- Balanced a three-way trade-off between precision, recall, and manual-curation cost, using threshold-based quality tiers to hold 99% precision while reducing manual curation costs by up to 70%
-- Organized Data Science meetups, technical talks, and team activities to promote knowledge sharing
+- Models: Trained and fine-tuned entity-resolution models to match and cluster medical activities into expert profiles, using embedding-based candidate retrieval followed by ranking with gradient-boosted trees (XGBoost)
+- Results: Achieved 99% precision while reducing the need for manual review. Quality thresholds determined which matches were automated and which required manual review, with precision and recall evaluated against human-annotated data
+- Scale: Processed billions of activity pairs in recurring workflows and generated millions of expert profiles across the US, EU, LATAM, and APAC
+- Production: Turned Jupyter prototypes into production PySpark and Airflow pipelines on AWS EMR, using MLflow, Docker, Kubernetes, testing, Grafana monitoring, and CI/CD. Optimized Spark performance and cluster costs while collaborating with cross-functional engineering teams
+- Team: Organized Data Science meetups and technical talks
 
 Data Engineer / Full-Stack Engineer at HPI Schul-Cloud – Dataport (April 2020 – November 2021)
 - Built and maintained data pipelines for 300k+ educational assets, improving structure, reliability, and discoverability for end users
-- Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality at scale
+- Implemented systematic data preparation, cleaning workflows, and duplicate-detection methods to ensure data quality
 - Contributed across the full stack (Python, Vue.js, PostgreSQL, Docker, Kubernetes) to maintain and scale the educational platform
 - Led technical requirements clarification, team operations, and onboarding during a multi-month organizational transition
 

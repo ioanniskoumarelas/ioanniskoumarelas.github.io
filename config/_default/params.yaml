@@ -54,7 +54,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'Ioannis Koumarelas, PhD — Machine Learning Engineer specializing in production ML systems, data quality, and entity resolution.'
+    description: 'Ioannis Koumarelas, PhD — Senior Data Scientist and Machine Learning Engineer specializing in production ML systems, data quality, and entity resolution.'
     twitter: ''
   analytics:
     disable: false
