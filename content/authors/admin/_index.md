@@ -101,7 +101,7 @@ work:
       Senior Data Scientist (Mar 2024 – Feb 2026) · Data Scientist (Dec 2021 – Feb 2024)
       * **Models:** Trained and fine-tuned entity-resolution models to match and cluster medical activities into expert profiles, using embedding-based candidate retrieval followed by ranking with gradient-boosted trees (XGBoost).
       * **Results:** Achieved 99% precision while reducing the need for manual review. Quality thresholds determined which matches were automated and which required manual review, with precision and recall evaluated against human-annotated data.
-      * **Scale:** Processed billions of activity pairs in recurring workflows and generated millions of expert profiles across the US, EU, LATAM, and APAC.
+      * **Scale:** Matched millions of activity pairs in recurring runs and billions during periodic profile creation, generating millions of expert profiles across US, EU, LATAM, and APAC.
       * **Production:** Turned Jupyter prototypes into production PySpark and Airflow pipelines on AWS EMR, using MLflow, Docker, Kubernetes, testing, Grafana monitoring, and CI/CD. Optimized Spark performance and cluster costs while collaborating with cross-functional engineering teams.
       * **Team:** Organized Data Science meetups and technical talks.
   - position: Data Engineer / Full-Stack Engineer
@@ -359,4 +359,4 @@ awards:
 
 <!-- Great applications can change the world and having high-quality data is more important than we previously thought. I am passionate about understanding data and making them a powerful tool in our hands through sophisticated Machine Learning and Data Engineering solutions. -->
 
-Senior Data Scientist (PhD) with 5+ years of industry experience building and deploying production ML systems, most recently in life sciences.
+Senior Data Scientist (PhD) with 5+ years of industry experience building and deploying production ML systems, most recently in life sciences. Specialized in data quality and entity resolution, with additional experience in embeddings, vector search, LLM applications, and agentic systems.
