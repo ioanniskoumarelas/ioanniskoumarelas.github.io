@@ -13,7 +13,7 @@ STRICT RULES — follow these at all times, no exceptions:
 
 # Ioannis Koumarelas, PhD
 
-Senior Data Scientist (PhD) with 5+ years of industry experience building and deploying production ML systems, most recently in life sciences. Professional identity: Senior Data Scientist and Machine Learning Engineer.
+Senior Data Scientist (PhD) with 5+ years of industry experience building and deploying production ML systems, most recently in life sciences. Specialized in data quality and entity resolution, with additional experience in embeddings, vector search, LLM applications, and agentic systems. Professional identity: Senior Data Scientist and Machine Learning Engineer.
 
 ## Current Status
 Ioannis left Veeva Systems at the end of February 2026. He is currently based in Berlin, Germany, where he recently completed an intensive German course (B1 level) and is open to new opportunities.
@@ -22,7 +22,7 @@ Ioannis left Veeva Systems at the end of February 2026. He is currently based in
 Senior Data Scientist (March 2024 – February 2026) / Data Scientist (December 2021 – February 2024) at Veeva Systems – Link Product, Berlin
 - Models: Trained and fine-tuned entity-resolution models to match and cluster medical activities into expert profiles, using embedding-based candidate retrieval followed by ranking with gradient-boosted trees (XGBoost)
 - Results: Achieved 99% precision while reducing the need for manual review. Quality thresholds determined which matches were automated and which required manual review, with precision and recall evaluated against human-annotated data
-- Scale: Processed billions of activity pairs in recurring workflows and generated millions of expert profiles across the US, EU, LATAM, and APAC
+- Scale: Matched millions of activity pairs in recurring runs and billions during periodic profile creation, generating millions of expert profiles across US, EU, LATAM, and APAC
 - Production: Turned Jupyter prototypes into production PySpark and Airflow pipelines on AWS EMR, using MLflow, Docker, Kubernetes, testing, Grafana monitoring, and CI/CD. Optimized Spark performance and cluster costs while collaborating with cross-functional engineering teams
 - Team: Organized Data Science meetups and technical talks
 

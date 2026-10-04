@@ -30,7 +30,7 @@
   {{- $icon := .icon }}
   {{ with $icon }}
   <div class="w-10 h-10 mb-4 bg-primary-100 dark:bg-primary-900/50 rounded-xl flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-800/60 transition-colors duration-300">
-    {{ partial "functions/get_icon" (dict "name" $icon "attributes" "class='w-5 h-5 text-primary-600 dark:text-primary-400'")  }}
+    {{ partial "functions/get_icon" (dict "name" $icon "attributes" "class='w-8 h-8 object-contain text-primary-600 dark:text-primary-400'")  }}
   </div>
   {{ end}}
   {{with .url}}<a href={{.}} target="_blank" rel="noopener">{{end}}
