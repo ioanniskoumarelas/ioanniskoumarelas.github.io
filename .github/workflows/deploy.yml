@@ -1,8 +1,8 @@
 name: Deploy website to GitHub Pages
 
 env:
-  WC_HUGO_VERSION: '0.152.2'
-  NODE_VERSION: '20'
+  WC_HUGO_VERSION: '0.167.0'
+  NODE_VERSION: '22'
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -64,7 +64,7 @@ jobs:
           node_modules/
           modules/*/node_modules/
         key: ${{ runner.os }}-hugo-deps-${{ hashFiles('**/go.mod', '**/package-lock.json',
-          '**/pnpm-lock.yaml') }}
+          '**/pnpm-lock.yaml', 'package.json') }}
         restore-keys: |
           ${{ runner.os }}-hugo-deps-
 
@@ -80,6 +80,12 @@ jobs:
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v5
+
+    - name: Ensure the Tailwind CLI is runnable by Hugo
+      # The node_modules cache is restored after `pnpm install`, so it can
+      # reinstate pnpm's shell wrapper. Hugo needs a Node script here.
+      if: hashFiles('package.json') != ''
+      run: node scripts/fix-tailwind-bin.mjs
 
     - name: Build with Hugo
       env:

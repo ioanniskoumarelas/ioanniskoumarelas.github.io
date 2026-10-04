@@ -22,7 +22,9 @@ pnpm build        # runs: hugo --minify
 npx pagefind --source "public"
 ```
 
-**Required tools**: Hugo Extended v0.152.2, Node.js 20+, pnpm 10+, Go (for Hugo modules).
+**Required tools**: Hugo Extended v0.167.0, Node.js 22+, pnpm 10+, Go (for Hugo modules).
+
+Hugo 0.163+ runs the Tailwind CLI through Node, which is why Node 22+ is required and why `config/_default/hugo.yaml` allowlists `tailwindcss` under `security.exec`. pnpm installs `node_modules/.bin/tailwindcss` as a shell wrapper that Hugo rejects, so a `postinstall` hook (`scripts/fix-tailwind-bin.mjs`) relinks it to the real CLI entry point.
 
 ## Architecture
 
